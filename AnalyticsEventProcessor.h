@@ -6,43 +6,48 @@
 
 #import <objc/NSObject.h>
 
-@class ASIdentifierManager, Account, AnalyticsAPIClient, NSDate, NSNotificationCenter, NSString, PersistedSet, RedditService, SessionTracker;
-@protocol AnalyticsProcessorDelegate, OS_dispatch_queue;
+@class Account, AccountIdentifiers, AnalyticsAPIClient, AppSettings, Loid, NSDate, NSNotificationCenter, NSString, PersistedSet, SessionTracker;
+@protocol AnalyticsProcessorDelegate;
 
 @interface AnalyticsEventProcessor : NSObject
 {
-    _Bool _isProcessingPendingEvents;
     _Bool _isSendingEvents;
+    _Bool _isProcessingPendingEvents;
     id <AnalyticsProcessorDelegate> _delegate;
-    PersistedSet *_eventsSet;
+    Account *_account;
+    AccountIdentifiers *_accountIdentifiers;
+    AnalyticsAPIClient *_apiClient;
+    Loid *_loid;
+    SessionTracker *_sessionTracker;
+    AppSettings *_appSettings;
     NSNotificationCenter *_notificationCenter;
-    NSString *_referrerUrlString;
-    NSString *_referrerDomain;
-    ASIdentifierManager *_adSupportManager;
+    PersistedSet *_eventsSet;
+    PersistedSet *_pendingEventsSet;
     long long _eventBatchSize;
     double _backoffSeconds;
     NSDate *_backoffTimestamp;
-    NSObject<OS_dispatch_queue> *_queue;
-    AnalyticsAPIClient *_apiClient;
-    PersistedSet *_pendingEventsSet;
-    SessionTracker *_sessionTracker;
+    NSString *_referrerUrlString;
+    NSString *_referrerDomain;
 }
 
++ (id)queue;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
-@property(readonly, nonatomic) PersistedSet *pendingEventsSet; // @synthesize pendingEventsSet=_pendingEventsSet;
-@property(readonly, nonatomic) AnalyticsAPIClient *apiClient; // @synthesize apiClient=_apiClient;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
+@property(copy) NSString *referrerDomain; // @synthesize referrerDomain=_referrerDomain;
+@property(copy) NSString *referrerUrlString; // @synthesize referrerUrlString=_referrerUrlString;
+@property(nonatomic) _Bool isProcessingPendingEvents; // @synthesize isProcessingPendingEvents=_isProcessingPendingEvents;
 @property(nonatomic) _Bool isSendingEvents; // @synthesize isSendingEvents=_isSendingEvents;
 @property(retain) NSDate *backoffTimestamp; // @synthesize backoffTimestamp=_backoffTimestamp;
 @property double backoffSeconds; // @synthesize backoffSeconds=_backoffSeconds;
 @property long long eventBatchSize; // @synthesize eventBatchSize=_eventBatchSize;
-@property(nonatomic) _Bool isProcessingPendingEvents; // @synthesize isProcessingPendingEvents=_isProcessingPendingEvents;
-@property(retain, nonatomic) ASIdentifierManager *adSupportManager; // @synthesize adSupportManager=_adSupportManager;
-@property(copy) NSString *referrerDomain; // @synthesize referrerDomain=_referrerDomain;
-@property(copy) NSString *referrerUrlString; // @synthesize referrerUrlString=_referrerUrlString;
-@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
+@property(readonly, nonatomic) PersistedSet *pendingEventsSet; // @synthesize pendingEventsSet=_pendingEventsSet;
 @property(readonly, nonatomic) PersistedSet *eventsSet; // @synthesize eventsSet=_eventsSet;
+@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
+@property(readonly, nonatomic) AppSettings *appSettings; // @synthesize appSettings=_appSettings;
+@property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
+@property(readonly, nonatomic) Loid *loid; // @synthesize loid=_loid;
+@property(readonly, nonatomic) AnalyticsAPIClient *apiClient; // @synthesize apiClient=_apiClient;
+@property(readonly, nonatomic) AccountIdentifiers *accountIdentifiers; // @synthesize accountIdentifiers=_accountIdentifiers;
+@property(readonly, nonatomic) Account *account; // @synthesize account=_account;
 @property(nonatomic) __weak id <AnalyticsProcessorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)updateWithReferrerUrlString:(id)arg1 referrerDomain:(id)arg2;
 - (id)analyticsNameForTheme:(id)arg1;
@@ -55,16 +60,13 @@
 - (void)requeuePendingEvent:(id)arg1;
 - (void)updateSessionIdForEvent:(id)arg1;
 @property(readonly, nonatomic) NSString *backgroundTaskName;
-@property(readonly, nonatomic) Account *account;
-@property(readonly, nonatomic) RedditService *redditService;
-@property(readonly, nonatomic) NSString *uniqueIdentifier;
 - (void)endBackgroundTask:(unsigned long long)arg1;
 - (unsigned long long)beginBackgroundTaskWithName:(id)arg1 expirationHandler:(CDUnknownBlockType)arg2;
 - (void)sendEventsToServer;
 - (void)flushPendingEvents;
 - (void)processEvents;
 - (void)startHeartbeat;
-- (id)initWithEventsSet:(id)arg1 pendingEventsSet:(id)arg2 apiClient:(id)arg3 redditSession:(id)arg4 notificationCenter:(id)arg5 adSupportManager:(id)arg6;
+- (id)initWithCachePath:(id)arg1 redditService:(id)arg2 appSettings:(id)arg3 apiClient:(id)arg4 notificationCenter:(id)arg5;
 
 @end
 

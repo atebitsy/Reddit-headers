@@ -13,6 +13,7 @@
     // Error parsing type: , name: appSettings
 }
 
++ (id)kSurveyModelKey;
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)triggerSurveyEvent:(long long)arg1;

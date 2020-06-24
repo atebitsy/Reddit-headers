@@ -12,20 +12,17 @@
 @interface _TtC6Reddit24StreamPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 {
     // Error parsing type: , name: controlView
-    // Error parsing type: , name: liveStreamViewerNav
-    // Error parsing type: , name: connectionIssueView
     // Error parsing type: , name: staticView
     // Error parsing type: , name: disabledAlpha
     // Error parsing type: , name: enabledAlpha
     // Error parsing type: , name: centerX
     // Error parsing type: , name: kSwipeTutorialDelaySeconds
     // Error parsing type: , name: presenter
-    // Error parsing type: , name: swipeHintSideView
-    // Error parsing type: , name: swipeTutorialView
-    // Error parsing type: , name: swipeTutorialTimer
     // Error parsing type: , name: didSeeFetchStreamErrorPopup
     // Error parsing type: , name: userIsPaging
     // Error parsing type: , name: mightBeDismissing
+    // Error parsing type: , name: swipeTutorialView
+    // Error parsing type: , name: swipeTutorialTimer
     // Error parsing type: , name: didShowPromptTooltip
     // Error parsing type: , name: promptTooltipView
     // Error parsing type: , name: isSettingViewControllers
@@ -36,13 +33,8 @@
     // Error parsing type: , name: streamViewControllerCache
     // Error parsing type: , name: chatVC
     // Error parsing type: , name: chatPresenter
-    // Error parsing type: , name: currentStreamLiveState
     // Error parsing type: , name: isPresentingCommunity
     // Error parsing type: , name: volumeObserver
-    // Error parsing type: , name: awardsAnimator
-    // Error parsing type: , name: awardAnnouncementView
-    // Error parsing type: , name: initialAwardsStreamID
-    // Error parsing type: , name: isUserInterfaceVisible
     // Error parsing type: , name: hasStatic
 }
 
@@ -55,9 +47,6 @@
 - (void)didTapRPANSubredditLink:(id)arg1;
 - (void)didTapBroadcast:(id)arg1;
 - (void)handleTapShare:(id)arg1;
-- (void)didTapAwardButton:(id)arg1;
-- (void)awardingFlowDidFailAwardingForTarget:(id)arg1;
-- (void)awardingFlowDidSStartAwardingForTarget:(id)arg1;
 - (void)didTapModerate:(id)arg1;
 - (void)closeLiveStream:(id)arg1;
 - (void)reachabilityDidChange;

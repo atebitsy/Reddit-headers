@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "ListingAnalyticsProtocol-Protocol.h"
+#import "AnalyticsViewProtocol-Protocol.h"
 
 @class RailsContext;
 
-@protocol RailsAnalyticsProtocol <ListingAnalyticsProtocol>
+@protocol RailsAnalyticsProtocol <AnalyticsViewProtocol>
 @property(readonly, nonatomic) RailsContext *railsContext;
 @end
 

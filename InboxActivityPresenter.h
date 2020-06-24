@@ -18,6 +18,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) PushNotification *markedAsReadPushNotif; // @synthesize markedAsReadPushNotif=_markedAsReadPushNotif;
 @property(nonatomic) unsigned long long filterType; // @synthesize filterType=_filterType;
+- (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
 - (void)markReadObjectAsReadInCurrentObjects:(id)arg1;
 - (void)markPushNotificationObjectAsReadIfNecessary;
 - (void)pushNotificationObjectMarkedAsRead:(id)arg1;

@@ -6,10 +6,12 @@
 
 #import "BaseCollectionViewCellNode.h"
 
-@class ASButtonNode, ASDisplayNode, ASTextNode, AdPost, FeedPostOptions, FeedPostThumbnailNode, FeedPostTitleNode;
+#import "FeedPostCallToActionNodeDelegate-Protocol.h"
+
+@class ASDisplayNode, ASTextNode, AdPost, FeedPostCallToActionNode, FeedPostOptions, FeedPostThumbnailNode, FeedPostTitleNode, NSString;
 @protocol CommentAdPostCellNodeDelegate, ViewContext;
 
-@interface CommentAdPostCellNode : BaseCollectionViewCellNode
+@interface CommentAdPostCellNode : BaseCollectionViewCellNode <FeedPostCallToActionNodeDelegate>
 {
     AdPost *_post;
     id <ViewContext> _viewContext;
@@ -18,17 +20,15 @@
     ASDisplayNode *_spacer;
     FeedPostTitleNode *_titleNode;
     ASTextNode *_textNode;
-    ASTextNode *_urlNode;
+    ASTextNode *_commentNode;
     FeedPostThumbnailNode *_thumbnailNode;
-    ASButtonNode *_commentNode;
-    ASButtonNode *_buttonNode;
+    FeedPostCallToActionNode *_callToActionNode;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) ASButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
-@property(retain, nonatomic) ASButtonNode *commentNode; // @synthesize commentNode=_commentNode;
+@property(retain, nonatomic) FeedPostCallToActionNode *callToActionNode; // @synthesize callToActionNode=_callToActionNode;
 @property(retain, nonatomic) FeedPostThumbnailNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
-@property(retain, nonatomic) ASTextNode *urlNode; // @synthesize urlNode=_urlNode;
+@property(retain, nonatomic) ASTextNode *commentNode; // @synthesize commentNode=_commentNode;
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) FeedPostTitleNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(retain, nonatomic) ASDisplayNode *spacer; // @synthesize spacer=_spacer;
@@ -38,9 +38,9 @@
 @property(readonly, nonatomic) AdPost *post; // @synthesize post=_post;
 - (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
-- (void)buttonNodeDidTap:(id)arg1;
-- (void)commentNodeDidTap:(id)arg1;
+- (void)feedPostCallToActionNodeDidTapLink:(id)arg1;
 - (void)thumbnailDidTap:(id)arg1;
+- (void)commentNodeDidTap:(id)arg1;
 - (void)textNodeDidTap:(id)arg1;
 - (void)didTapDiscussion;
 - (void)didTapContent;
@@ -48,6 +48,12 @@
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didLoad;
 - (id)initWithViewContext:(id)arg1 adPost:(id)arg2 delegate:(id)arg3;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

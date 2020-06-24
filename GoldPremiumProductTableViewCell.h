@@ -30,7 +30,7 @@
 - (void)setupViews;
 - (void)setBonusLabelHidden:(_Bool)arg1;
 - (void)handleCellDidTap:(id)arg1;
-- (void)configureWithProduct:(id)arg1 forAccount:(id)arg2;
+- (void)configureWithProduct:(id)arg1 forAccount:(id)arg2 action:(CDUnknownBlockType)arg3;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

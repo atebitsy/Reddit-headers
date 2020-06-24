@@ -19,7 +19,7 @@
 @property(retain, nonatomic) UILabel *featuredLabel; // @synthesize featuredLabel=_featuredLabel;
 - (id)highlightColor;
 - (void)setupViews;
-- (void)configureWithProduct:(id)arg1 forAccount:(id)arg2;
+- (void)configureWithProduct:(id)arg1 action:(CDUnknownBlockType)arg2;
 
 @end
 

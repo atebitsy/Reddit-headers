@@ -9,6 +9,7 @@
 @interface _TtC7Economy24GoldFreebieTableViewCell : BaseTableViewCell
 {
     // Error parsing type: , name: freeAwardClaimView
+    // Error parsing type: , name: isV2
 }
 
 - (void).cxx_destruct;

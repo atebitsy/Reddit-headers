@@ -16,6 +16,7 @@
     _Bool _isUnableToRefreshToken;
     Account *_account;
     Loid *_loid;
+    SessionTracker *_sessionTracker;
     AccountIdentifiers *_accountIdentifiers;
     NSURL *_dataDirectory;
     BaseStore *_userStore;
@@ -34,7 +35,6 @@
     RedditServiceBackoffState *_backoffState;
     NSURLSession *_session;
     LegacyCredentials *_credentials;
-    SessionTracker *_sessionTracker;
     NSObject<OS_dispatch_queue> *_parseQueue;
     NSArray *_requestProcessors;
     NSArray *_responseProcessors;
@@ -53,7 +53,6 @@
 @property(readonly, nonatomic) NSArray *responseProcessors; // @synthesize responseProcessors=_responseProcessors;
 @property(readonly, nonatomic) NSArray *requestProcessors; // @synthesize requestProcessors=_requestProcessors;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parseQueue; // @synthesize parseQueue=_parseQueue;
-@property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
 @property(retain, nonatomic) LegacyCredentials *credentials; // @synthesize credentials=_credentials;
 @property(readonly, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) RedditServiceBackoffState *backoffState; // @synthesize backoffState=_backoffState;
@@ -75,6 +74,7 @@
 @property(readonly, nonatomic) NSURL *dataDirectory; // @synthesize dataDirectory=_dataDirectory;
 @property(nonatomic) _Bool isCurrentService; // @synthesize isCurrentService=_isCurrentService;
 @property(readonly, nonatomic) AccountIdentifiers *accountIdentifiers; // @synthesize accountIdentifiers=_accountIdentifiers;
+@property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
 @property(retain, nonatomic) Loid *loid; // @synthesize loid=_loid;
 @property(retain, nonatomic) Account *account; // @synthesize account=_account;
 - (void)createAuthenticatedRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
@@ -277,6 +277,7 @@
 - (void)validatePurchaseWithMetadata:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)submitExposureEvents:(id)arg1 targetingInfo:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchExperimentVariantsWithTargetingInfo:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchTopAwardedPostDataWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchSortedUsableAwardTotalsForSubreddit:(id)arg1 post:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateAccountCoinsWithAmount:(id)arg1;
 - (id)errorForStatus:(id)arg1;
@@ -288,7 +289,6 @@
 - (id)postCollectionWithGraphQLData:(id)arg1;
 - (void)submitPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)parseGraphQLPostData:(id)arg1 parseSubreddits:(_Bool)arg2 parseCrosspostSubreddits:(_Bool)arg3;
-- (CDUnknownBlockType)parsePostBlock;
 - (CDUnknownBlockType)parsePostWithSubredditBlock;
 - (id)geoContributableSubredditsListing;
 - (id)globalCommunityTagsListing:(_Bool)arg1;

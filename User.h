@@ -7,17 +7,19 @@
 #import <objc/NSObject.h>
 
 #import <RedditCore/BaseModel-Protocol.h>
+#import <RedditCore/NSCopying-Protocol.h>
 #import <RedditCore/NSSecureCoding-Protocol.h>
 
 @class NSDate, NSString, Subreddit;
 
-@interface User : NSObject <BaseModel, NSSecureCoding>
+@interface User : NSObject <NSCopying, BaseModel, NSSecureCoding>
 {
     _Bool _hasPremium;
     _Bool _isVerified;
     _Bool _isSubscribed;
     _Bool _isVisibleActiveInCommunity;
     _Bool _isEmployeeUser;
+    _Bool _willAcceptChats;
     NSString *_pk;
     NSString *_username;
     NSDate *_createdAt;
@@ -30,10 +32,10 @@
 }
 
 + (id)usernameFromRedditorInfo:(id)arg1;
-+ (id)keyPathsToObserveChanges;
 + (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
 @property(nonatomic) long long totalKarma; // @synthesize totalKarma=_totalKarma;
+@property(nonatomic) _Bool willAcceptChats; // @synthesize willAcceptChats=_willAcceptChats;
 @property(nonatomic) _Bool isEmployeeUser; // @synthesize isEmployeeUser=_isEmployeeUser;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) _Bool isVisibleActiveInCommunity; // @synthesize isVisibleActiveInCommunity=_isVisibleActiveInCommunity;
@@ -52,6 +54,7 @@
 @property(readonly, nonatomic) NSString *profileDescriptionText;
 @property(readonly, copy, nonatomic) NSString *fullID;
 @property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain;
+- (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

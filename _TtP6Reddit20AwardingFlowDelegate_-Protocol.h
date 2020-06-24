@@ -8,6 +8,6 @@
 
 @protocol _TtP6Reddit20AwardingFlowDelegate_ <NSObject>
 - (void)awardingFlowDidFailAwardingForTarget:(id)arg1;
-- (void)awardingFlowDidSStartAwardingForTarget:(id)arg1;
+- (void)awardingFlowDidStartAwardingForTarget:(id)arg1;
 @end
 

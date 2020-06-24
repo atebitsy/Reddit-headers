@@ -8,7 +8,9 @@
 
 @interface _TtC7Economy19EconProductsService : _TtC7Economy27BaseAccountDependentService
 {
+    // Error parsing type: , name: notificationTokens
     // Error parsing type: , name: $__lazy_storage_$_coinSaleAsyncCache
+    // Error parsing type: , name: $__lazy_storage_$_productsCache
 }
 
 @end

@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit37AnonymousBrowsingOptOutViewController : BaseViewController
 {
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: stackView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: descriptionLabel
@@ -16,8 +17,8 @@
 }
 
 - (void).cxx_destruct;
-- (void)viewDidLoad;
 - (id)init;
+- (void)viewDidLoad;
 
 @end
 

@@ -7,30 +7,36 @@
 #import <objc/NSObject.h>
 
 #import "AnalyticsProcessorDelegate-Protocol.h"
+#import "_TtP7Economy22EconomyAnalyticsLogger_-Protocol.h"
 
-@class AnalyticsEventProcessor, NSString;
+@class Account, AnalyticsEventProcessor, AppSettings, Loid, NSString;
 
-@interface AnalyticsManager : NSObject <AnalyticsProcessorDelegate>
+@interface AnalyticsManager : NSObject <_TtP7Economy22EconomyAnalyticsLogger_, AnalyticsProcessorDelegate>
 {
-    _Bool _enabled;
+    Account *_account;
+    Loid *_loid;
+    AppSettings *_appSettings;
     AnalyticsEventProcessor *_eventProcessor;
 }
 
 + (void)recordTraceWithSentryForEvent:(id)arg1;
 + (void)logEvent:(id)arg1 usingAnalyticsManager:(id)arg2;
 + (void)logEvents:(id)arg1 usingAnalyticsManager:(id)arg2;
-+ (void)setup;
++ (void)setIsEnabled:(_Bool)arg1;
++ (_Bool)isEnabled;
 + (id)instance;
 - (void).cxx_destruct;
-@property _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) AnalyticsEventProcessor *eventProcessor; // @synthesize eventProcessor=_eventProcessor;
+@property(readonly, nonatomic) AppSettings *appSettings; // @synthesize appSettings=_appSettings;
+@property(readonly, nonatomic) Loid *loid; // @synthesize loid=_loid;
+@property(readonly, nonatomic) Account *account; // @synthesize account=_account;
 - (void)persistInstallTimeStamp;
 - (void)appBackgrounded;
 - (void)logAnalyticsEvents:(id)arg1;
 - (void)logAnalyticsEvent:(id)arg1;
 - (void)configureWithBranchParameters:(id)arg1 isFirstLaunch:(_Bool)arg2;
-- (void)enable;
-- (id)init;
+- (_Bool)isProcessingEnabled;
+- (id)initWithService:(id)arg1 appSettings:(id)arg2;
 - (void)logLaunchEventWithReferringURL:(id)arg1 isFirstLaunch:(_Bool)arg2;
 - (void)logWithEvents:(id)arg1;
 - (void)logWithEvent:(id)arg1;

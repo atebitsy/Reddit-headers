@@ -16,6 +16,7 @@
     _Bool selected;
     _Bool _profileNSFW;
     _Bool _blockedByMe;
+    _Bool _willAcceptChats;
     unsigned long long _uniqueID;
     User *_user;
     NSString *_realName;
@@ -36,6 +37,7 @@
 + (id)sortedContacts:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SBDUser *sendbirdUser; // @synthesize sendbirdUser=_sendbirdUser;
+@property(nonatomic) _Bool willAcceptChats; // @synthesize willAcceptChats=_willAcceptChats;
 @property(copy, nonatomic) NSDictionary *serverUserData; // @synthesize serverUserData=_serverUserData;
 @property(nonatomic) _Bool blockedByMe; // @synthesize blockedByMe=_blockedByMe;
 @property(retain, nonatomic) NSDate *updatedAt; // @synthesize updatedAt=_updatedAt;

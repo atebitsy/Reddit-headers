@@ -7,6 +7,7 @@
 #import <RedditCore/ExperimentManager.h>
 
 @interface ExperimentManager (Economy)
+@property(nonatomic, readonly) long long econCoinsStorefrontRevampVariant;
 @property(nonatomic, readonly) _Bool isEconHideAwardsEnabled;
 @property(nonatomic, readonly) _Bool isLapsedUserTargetedOfferEnabled;
 @property(nonatomic, readonly) _Bool isNewUserTargetedOfferEnabled;
@@ -15,13 +16,11 @@
 @property(nonatomic, readonly) _Bool isEconSubredditPowerupsEnabled;
 @property(nonatomic, readonly) _Bool isEconCancelPremiumOfferEnabled;
 @property(nonatomic, readonly) _Bool isEconKarmaAwardScoreEnabled;
-@property(nonatomic, readonly) _Bool isEconFeedAwardTrayV2Enabled;
 @property(nonatomic, readonly) _Bool isEconRPANAwardTrayV2Enabled;
 - (void)exposeEconAwardsPlaqueExperiement;
 @property(nonatomic, readonly) _Bool isEconAwardsPlaqueEnabled;
 @property(nonatomic, readonly) _Bool isEconStorefrontClaimEnabled;
 @property(nonatomic, readonly) _Bool isEconFeedAwardsV2SheetEnabled;
-@property(nonatomic, readonly) _Bool isEconRPANAwardsV2SheetEnabled;
 @property(nonatomic, readonly) _Bool isEconAnimationsControlEnabled;
 @property(nonatomic, readonly) _Bool isEconCommentHighlightingAnimationEnabled;
 @property(nonatomic, readonly) _Bool isAwardLeaderBoardsEnabled;

@@ -9,7 +9,5 @@
 @interface _TtC6Reddit37AnonymousBrowsingSignUpViewController (Reddit)
 - (void)didTapContinueButton;
 - (void)didTapEmailAuthButton;
-- (void)didTapAppleAuthButton;
-- (void)didTapGoogleAuthButton;
 @end
 

@@ -19,7 +19,6 @@
     UILayoutGuide *_contentLayoutGuide;
     NSURL *_analyticsReferringURL;
     NSString *_analyticsReason;
-    NSString *_analyticsCorrelationKey;
     NSString *_analyticsSource;
     NSString *_pageItemText;
     NSString *_pageItemId;
@@ -34,7 +33,6 @@
 @property(copy, nonatomic) NSString *pageItemId; // @synthesize pageItemId=_pageItemId;
 @property(copy, nonatomic) NSString *pageItemText; // @synthesize pageItemText=_pageItemText;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;
-@property(copy, nonatomic) NSString *analyticsCorrelationKey; // @synthesize analyticsCorrelationKey=_analyticsCorrelationKey;
 @property(copy, nonatomic) NSString *analyticsReason; // @synthesize analyticsReason=_analyticsReason;
 @property(copy, nonatomic) NSURL *analyticsReferringURL; // @synthesize analyticsReferringURL=_analyticsReferringURL;
 @property(nonatomic) _Bool prefersTabBarHidden; // @synthesize prefersTabBarHidden=_prefersTabBarHidden;
@@ -56,7 +54,6 @@
 @property(readonly, nonatomic) UIView *majorContentView;
 - (long long)preferredStatusBarStyle;
 - (unsigned long long)supportedInterfaceOrientations;
-- (void)calculateAnalyticsReason;
 - (void)didMoveToParentViewController:(id)arg1;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidLayoutSubviews;

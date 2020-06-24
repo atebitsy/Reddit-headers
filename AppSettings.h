@@ -47,7 +47,6 @@
 @property(copy, nonatomic) NSDate *lastDatePromptedForRating;
 @property(nonatomic) long long significantEventCount;
 @property(nonatomic) long long appRatingSessionCount;
-@property(nonatomic) _Bool hasLaunched;
 @property(copy, nonatomic) NSString *analyticsNotificationId;
 @property(copy, nonatomic) NSString *mwebLoid;
 @property(readonly, nonatomic) NSDate *installDate;

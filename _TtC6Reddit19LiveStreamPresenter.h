@@ -13,6 +13,7 @@
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: streamManager
     // Error parsing type: , name: stream
+    // Error parsing type: , name: isFetchingPost
     // Error parsing type: , name: viewSessionId
     // Error parsing type: , name: playbackTracker
 }

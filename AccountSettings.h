@@ -41,7 +41,6 @@
 - (void)setHasSeenBroadcastPromptNewLabelForSubredditInfo:(id)arg1;
 - (_Bool)hasSeenBroadcastPromptNewLabelForSubredditInfo:(id)arg1;
 @property(nonatomic) _Bool hasSeenLiveStreamingSwipeHintV2;
-@property(nonatomic) _Bool hasSeenLiveStreamingSwipeHint;
 @property(nonatomic) _Bool hasSeenLiveStreamingFirstTimeViewerEntryModal;
 @property(nonatomic) _Bool hasSeenFirstTimeBroadcasterEntryModal;
 @property(nonatomic) _Bool hasCollapsedStreamingEntryPoint;

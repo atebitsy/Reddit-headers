@@ -20,7 +20,7 @@
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterPreloadState;
-- (id)initWithRedditVideoViewBlock:(CDUnknownBlockType)arg1;
+- (id)initWithViewContext:(id)arg1 options:(id)arg2 redditVideoViewBlock:(CDUnknownBlockType)arg3;
 @property(nonatomic, readonly) _TtC11RedditVideo21RedditVideoPlayerView *redditVideoPlayerView;
 @property(nonatomic, readonly) _TtC11RedditVideo15RedditVideoView *redditVideoView;
 @property(nonatomic, readonly) ASDisplayNode *node; // @synthesize node;

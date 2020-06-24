@@ -7,17 +7,22 @@
 #import <RedditUI/BaseCollectionViewCell.h>
 
 @class NotificationView;
+@protocol NotificationCellDelegate;
 
 @interface NotificationCell : BaseCollectionViewCell
 {
     NotificationView *_mainContentView;
+    id <NotificationCellDelegate> _delegate;
 }
 
 + (struct CGSize)calculatedSizeForData:(id)arg1 collectionViewWidth:(double)arg2;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <NotificationCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NotificationView *mainContentView; // @synthesize mainContentView=_mainContentView;
 - (void)prepareForReuse;
 - (void)configureWithData:(id)arg1;
+- (void)viewDidBecomeFullyVisible:(id)arg1;
+- (void)dealloc;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

@@ -16,7 +16,6 @@
     // Error parsing type: , name: streamManager
     // Error parsing type: , name: delegate
     // Error parsing type: , name: didInitialTopStreamsFetchOccur
-    // Error parsing type: , name: isFetchingPost
     // Error parsing type: , name: streamPkBeingFetched
     // Error parsing type: , name: viewSessionId
     // Error parsing type: , name: current

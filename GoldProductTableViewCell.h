@@ -6,21 +6,18 @@
 
 #import <RedditUI/BaseTableViewCell.h>
 
-@class Account, GoldProduct;
-@protocol GoldProductTableViewCellDelegate;
+@class GoldProduct;
 
 @interface GoldProductTableViewCell : BaseTableViewCell
 {
     GoldProduct *_product;
-    Account *_account;
-    id <GoldProductTableViewCellDelegate> _delegate;
+    CDUnknownBlockType _action;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) __weak id <GoldProductTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) Account *account; // @synthesize account=_account;
+@property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(retain, nonatomic) GoldProduct *product; // @synthesize product=_product;
-- (void)configureWithProduct:(id)arg1 forAccount:(id)arg2;
+- (void)configureWithProduct:(id)arg1 action:(CDUnknownBlockType)arg2;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

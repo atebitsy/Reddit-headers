@@ -27,6 +27,7 @@
     _Bool _isChatMessageReportingEnabled;
     _Bool _isChatUserReportingEnabled;
     _Bool _isEmailPermissionRequired;
+    NSDate *_createdAt;
     NSString *_email;
     long long _hasMail;
     long long _hasModMail;
@@ -65,6 +66,7 @@
 @property(nonatomic) _Bool hasVerifiedEmail; // @synthesize hasVerifiedEmail=_hasVerifiedEmail;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic) _Bool canAccessEmail; // @synthesize canAccessEmail=_canAccessEmail;
+@property(copy, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, nonatomic) _Bool isLoggedIn;
 @property(readonly, nonatomic) _Bool isNotLoggedIn;
@@ -78,10 +80,6 @@
 - (id)initWithPk:(id)arg1;
 @property(readonly, nonatomic) _Bool isEmployeeUser;
 @property(readonly, nonatomic) Subreddit *subreddit;
-@property(readonly, nonatomic) long long totalKarma;
-@property(readonly, nonatomic) long long linkKarma;
-@property(readonly, nonatomic) long long commentKarma;
-@property(readonly, nonatomic) NSDate *createdAt;
 @property(readonly, copy, nonatomic) NSString *fullID;
 
 // Remaining properties

@@ -9,6 +9,7 @@
 @class NSString;
 
 @interface ExperimentManager (Reddit)
+@property(readonly, nonatomic) _Bool isModPNEnabled;
 @property(readonly, nonatomic) _Bool isMediaSelectionFlowEnabledForImagePosts;
 @property(readonly, nonatomic) _Bool isMediaGalleriesEnabled;
 @property(readonly, nonatomic) _Bool isSplashScreenRefactorEnabled;
@@ -35,12 +36,10 @@
 @property(readonly, nonatomic) long long redditCinemaVariant;
 @property(readonly, nonatomic) _Bool isRPANAbrBroadcastEnabled;
 @property(readonly, nonatomic) long long rpanEntryPointUIVariant;
-@property(readonly, nonatomic) long long rpanSuperScrubberVariant;
 @property(readonly, nonatomic) long long rpanEntryPointCopyVariant;
 @property(readonly, nonatomic) _Bool isRPANFeedTheMeterEnabled;
 @property(readonly, nonatomic) _Bool isRPANBroadcasterPromptEnabled;
 @property(readonly, nonatomic) _Bool isRPANBroadcasterUIRefreshEnabled;
-@property(readonly, nonatomic) _Bool isRPANViewerUIRefreshEnabled;
 @property(readonly, nonatomic) _Bool isLiveStreamingEntryPointEnabled;
 @property(readonly, nonatomic) _Bool isUserProfilesStartChatButtonAnimationEnabled;
 @property(readonly, nonatomic) long long chatPostRulesVariant;
@@ -62,6 +61,7 @@
 @property(readonly, nonatomic) long long postingDifficultyVariant;
 @property(readonly, nonatomic) _Bool isSubredditMentionsEnabled;
 - (void)exposeUserProfilesStartChatButtonAnimation;
+- (void)exposeRPANChatPostVoting;
 - (void)exposeChatPostVoting;
 - (void)exposeHybridVideoTap;
 @property(readonly, nonatomic) _Bool isHybridVideoTapEnabled;
@@ -90,6 +90,7 @@
 @property(readonly, nonatomic) _Bool isCommunityTabRefactorEnabled;
 @property(readonly, nonatomic) _Bool isLocationRecommendationsToggleEnabled;
 @property(readonly, nonatomic) _Bool isEditUsernameEnabled;
+- (_Bool)shouldOverrideSingleSignOnExperiment;
 @property(readonly, nonatomic) _Bool isSingleSignOnSplashExposedEnabled;
 @property(readonly, nonatomic) _Bool isSingleSignOnEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletInterfaceEnabled;

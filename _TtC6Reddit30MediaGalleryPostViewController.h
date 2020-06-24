@@ -11,6 +11,7 @@
 @interface _TtC6Reddit30MediaGalleryPostViewController : PostViewController
 {
     // Error parsing type: , name: annotatedImages
+    // Error parsing type: , name: appsFlyerTracker
     // Error parsing type: , name: captionsButton
     // Error parsing type: , name: orderingViewController
     // Error parsing type: , name: stackView
@@ -19,8 +20,10 @@
 - (void).cxx_destruct;
 - (id)initWithAccountContext:(id)arg1;
 - (void)didTapCaptionsButton;
+- (void)didTapPostButton:(id)arg1;
 - (id)analyticsPostComposerType;
 - (void)mediaSelectionNavigationController:(id)arg1 didSelect:(id)arg2;
+- (_Bool)baseTextView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 @property(nonatomic, readonly) NSString *analyticsScreenViewName;
 - (void)dealloc;
 - (void)viewDidLoad;

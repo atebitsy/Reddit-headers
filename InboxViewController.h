@@ -27,6 +27,8 @@
 @property(retain, nonatomic) MailListViewController *mailController; // @synthesize mailController=_mailController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)navigateToNotificationSettingsViewController;
+- (id)currentOnScreenInboxTab;
+- (id)currentOnScreenPageType;
 - (void)logAnalyticsEventWithAction:(id)arg1 noun:(id)arg2;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)themeDidChange:(id)arg1;

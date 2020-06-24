@@ -12,6 +12,7 @@
     // Error parsing type: , name: linkButton
     // Error parsing type: , name: gifButton
     // Error parsing type: , name: emoteButton
+    // Error parsing type: , name: keyboardButton
     // Error parsing type: , name: submitButton
     // Error parsing type: , name: isEmoteComposeEnabled
     // Error parsing type: , name: isGIFComposeEnabled
@@ -19,6 +20,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)didTapToolbarButton:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)init;
 

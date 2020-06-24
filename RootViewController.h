@@ -32,7 +32,6 @@
 }
 
 + (void)reloadAllControllers;
-+ (id)currentAccountContext;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *blockInputView; // @synthesize blockInputView=_blockInputView;
 @property(readonly, nonatomic) NSDictionary *launchOptions; // @synthesize launchOptions=_launchOptions;
@@ -72,6 +71,7 @@
 - (void)unloadChildViewControllers;
 - (void)handleConfigUpdatedWithError:(id)arg1;
 - (void)reloadAllControllers;
+- (void)showSurvey:(id)arg1;
 - (void)applicationUserDidTakeScreenshot:(id)arg1;
 - (void)leaveAnonymousBrowsingMode:(id)arg1;
 - (void)openUserAccountDrawer:(id)arg1;

@@ -11,10 +11,12 @@
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: tabNode
     // Error parsing type: , name: lineNode
+    // Error parsing type: , name: timeLeftTextNode
     // Error parsing type: , name: optionNodes
     // Error parsing type: , name: buttonNode
     // Error parsing type: , name: contentInsets
     // Error parsing type: , name: buttonInsets
+    // Error parsing type: , name: timeLeftInsets
 }
 
 - (void).cxx_destruct;

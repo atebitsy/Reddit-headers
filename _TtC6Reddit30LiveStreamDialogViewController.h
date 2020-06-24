@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: titleView
     // Error parsing type: , name: subtitleView
-    // Error parsing type: , name: experimentManager
     // Error parsing type: , name: bottomOverlay
     // Error parsing type: , name: optionsPosition
     // Error parsing type: , name: closerX

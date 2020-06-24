@@ -9,17 +9,18 @@
 #import <RedditCore/NSURLRequestProcessor-Protocol.h>
 #import <RedditCore/NSURLResponseProcessor-Protocol.h>
 
-@class NSString, NSUserDefaults;
+@class NSString;
+@protocol UserDefaultsProtocol;
 
 @interface Loid : NSObject <NSURLRequestProcessor, NSURLResponseProcessor>
 {
     NSString *_pk;
-    NSUserDefaults *_userDefaults;
+    id <UserDefaultsProtocol> _userDefaults;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
-@property(retain, nonatomic) NSString *pk; // @synthesize pk=_pk;
+@property(readonly, nonatomic) id <UserDefaultsProtocol> userDefaults; // @synthesize userDefaults=_userDefaults;
+@property(readonly, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(readonly, copy) NSString *debugDescription;
 - (void)processResponse:(id)arg1;
 - (void)processRequest:(id)arg1;

@@ -7,6 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol AnalyticsProcessorDelegate <NSObject>
-- (_Bool)enabled;
+- (_Bool)isProcessingEnabled;
 @end
 

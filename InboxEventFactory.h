@@ -11,8 +11,12 @@
 }
 
 + (id)inboxNotificationSettingsTooltipEvent;
-+ (id)viewInboxActivityEvent;
-+ (id)inboxEventWithAction:(id)arg1 noun:(id)arg2 pageType:(id)arg3;
++ (id)viewInboxMessagesEventWithBadgeCount:(unsigned long long)arg1;
++ (id)viewInboxActivityEventWithBadgeCount:(unsigned long long)arg1;
++ (id)viewInboxEventForTab:(id)arg1 pageType:(id)arg2 badgeCount:(unsigned long long)arg3;
++ (id)inboxEventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 pageType:(id)arg4 tab:(id)arg5 badgeCount:(unsigned long long)arg6;
++ (id)inboxEventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 pageType:(id)arg4 tab:(id)arg5;
++ (id)inboxEventWithAction:(id)arg1 noun:(id)arg2 pageType:(id)arg3 badgeCount:(unsigned long long)arg4;
 + (id)inboxEventWithMessage:(id)arg1 action:(id)arg2 noun:(id)arg3 pageType:(id)arg4;
 + (id)inboxEventWithNotification:(id)arg1 action:(id)arg2 pageType:(id)arg3;
 

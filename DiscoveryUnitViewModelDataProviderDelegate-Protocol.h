@@ -7,11 +7,10 @@
 #import "NSObject-Protocol.h"
 #import "TemplateParserContext-Protocol.h"
 
-@class DiscoveryLayout, DiscoveryUnit, DiscoveryUnitViewModelDataProvider, NSString;
+@class DiscoveryLayout, DiscoveryUnit, DiscoveryUnitViewModelDataProvider;
 @protocol DiscoveryUnitViewModel;
 
 @protocol DiscoveryUnitViewModelDataProviderDelegate <NSObject, TemplateParserContext>
-@property(copy, nonatomic) NSString *analyticsPageType;
 - (_Bool)discoveryUnitViewModelEnabled:(id <DiscoveryUnitViewModel>)arg1 withDiscoveryUnit:(DiscoveryUnit *)arg2;
 - (id <DiscoveryUnitViewModel>)createViewModelForDiscoveryUnit:(DiscoveryUnit *)arg1;
 - (unsigned long long)surfaceType;

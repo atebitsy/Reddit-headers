@@ -10,14 +10,13 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
 @class FeedNavigator, ListingPresenter, NSString, RailsContext, RedditService, Subreddit;
-@protocol AccountContext, AnalyticsViewProtocol, CarouselDelegatorDelegate, ListingAnalyticsProtocol;
+@protocol AccountContext, AnalyticsViewProtocol, CarouselDelegatorDelegate;
 
 @interface CarouselDelegator : NSObject <UIViewControllerTransitioningDelegate, CarouselContainerNodeDelegate>
 {
     id <CarouselDelegatorDelegate> _delegate;
     Subreddit *_sourceSubreddit;
     ListingPresenter *_listingPresenter;
-    id <ListingAnalyticsProtocol> _listingAnalytics;
     CDUnknownBlockType _carouselSeeMoreAction;
     CDUnknownBlockType _carouselHasMoreContent;
     CDUnknownBlockType _previewModeEnabledForCarouselItem;
@@ -35,7 +34,6 @@
 @property(copy, nonatomic) CDUnknownBlockType previewModeEnabledForCarouselItem; // @synthesize previewModeEnabledForCarouselItem=_previewModeEnabledForCarouselItem;
 @property(copy, nonatomic) CDUnknownBlockType carouselHasMoreContent; // @synthesize carouselHasMoreContent=_carouselHasMoreContent;
 @property(copy, nonatomic) CDUnknownBlockType carouselSeeMoreAction; // @synthesize carouselSeeMoreAction=_carouselSeeMoreAction;
-@property(nonatomic) __weak id <ListingAnalyticsProtocol> listingAnalytics; // @synthesize listingAnalytics=_listingAnalytics;
 @property(nonatomic) __weak ListingPresenter *listingPresenter; // @synthesize listingPresenter=_listingPresenter;
 @property(nonatomic) __weak Subreddit *sourceSubreddit; // @synthesize sourceSubreddit=_sourceSubreddit;
 @property(nonatomic) __weak id <CarouselDelegatorDelegate> delegate; // @synthesize delegate=_delegate;

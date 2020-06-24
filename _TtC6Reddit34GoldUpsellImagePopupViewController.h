@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: fromViewController
     // Error parsing type: , name: accountContext
-    // Error parsing type: , name: experimentManager
+    // Error parsing type: , name: configManager
     // Error parsing type: , name: completionCallback
     // Error parsing type: , name: $__lazy_storage_$_policyText
 }
@@ -22,7 +22,7 @@
 - (void)imagePopupViewControllerDidCancel:(id)arg1;
 - (void)imagePopupViewControllerDidConfirm:(id)arg1;
 - (void)showWithViewModel:(id)arg1;
-- (id)initFromViewController:(id)arg1 accountContext:(id)arg2 experimentManager:(id)arg3 completionCallback:(CDUnknownBlockType)arg4;
+- (id)initFromViewController:(id)arg1 accountContext:(id)arg2 configManager:(id)arg3 completionCallback:(CDUnknownBlockType)arg4;
 
 @end
 

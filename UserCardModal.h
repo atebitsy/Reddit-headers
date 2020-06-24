@@ -17,6 +17,7 @@
 {
     _Bool _isUserBanned;
     _Bool _isUserMuted;
+    _Bool _userWillAcceptChats;
     id <_TtP6Reddit20UserCardViewDelegate_> _delegate;
     id <ViewContext> _viewContext;
     BaseView *_modalView;
@@ -46,6 +47,7 @@
 @property(retain, nonatomic) BaseLabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) BaseImageView *profilePicture; // @synthesize profilePicture=_profilePicture;
 @property(retain, nonatomic) BaseView *modalView; // @synthesize modalView=_modalView;
+@property(nonatomic) _Bool userWillAcceptChats; // @synthesize userWillAcceptChats=_userWillAcceptChats;
 @property(nonatomic) _Bool isUserMuted; // @synthesize isUserMuted=_isUserMuted;
 @property(nonatomic) _Bool isUserBanned; // @synthesize isUserBanned=_isUserBanned;
 @property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;

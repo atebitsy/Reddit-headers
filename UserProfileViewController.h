@@ -21,6 +21,7 @@
 @interface UserProfileViewController : PagedTabViewController <ParallaxHeaderViewCallback, RUIActionSheetViewControllerDelegate, UIGestureRecognizerDelegate, PagedTabControllerParentCallback, UserProfileEditViewControllerDelegate, UserProfilePresenterDelegate, SubredditContextProvider, PreviewModeDelegate>
 {
     _Bool _previewModeEnabled;
+    NSArray *_overflowItems;
     NSString *_username;
     Subreddit *_subreddit;
     UserProfilePresenter *_presenter;
@@ -53,6 +54,7 @@
 @property(nonatomic) _Bool previewModeEnabled; // @synthesize previewModeEnabled=_previewModeEnabled;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
+@property(retain, nonatomic) NSArray *overflowItems; // @synthesize overflowItems=_overflowItems;
 - (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)showNewCustomFeedTooltip;
@@ -78,7 +80,7 @@
 - (void)floatingHeaderShouldMove:(id)arg1;
 - (double)preferredMaxFloatingTransformY;
 - (void)pagedTabControllerChildDidStartReloading:(id)arg1;
-- (id)overflowItems;
+- (void)configureOverflowItems;
 - (void)didTapOverflow:(id)arg1;
 - (void)didTapShare:(id)arg1;
 - (void)addToCustomFeed;

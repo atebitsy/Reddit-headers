@@ -17,6 +17,8 @@
     NSMutableDictionary *_firedPixels;
     NSMutableDictionary *_impresssionPayload;
     NSMutableArray *_impressions;
+    NSMutableDictionary *_visibilityContext;
+    NSMutableDictionary *_videoVisibilityContext;
     NSMutableDictionary *_viewSize;
     NSMutableDictionary *_screenSize;
     NSMutableDictionary *_loadTime;
@@ -97,6 +99,8 @@
 @property(retain, nonatomic) NSMutableDictionary *loadTime; // @synthesize loadTime=_loadTime;
 @property(retain, nonatomic) NSMutableDictionary *screenSize; // @synthesize screenSize=_screenSize;
 @property(retain, nonatomic) NSMutableDictionary *viewSize; // @synthesize viewSize=_viewSize;
+@property(retain, nonatomic) NSMutableDictionary *videoVisibilityContext; // @synthesize videoVisibilityContext=_videoVisibilityContext;
+@property(retain, nonatomic) NSMutableDictionary *visibilityContext; // @synthesize visibilityContext=_visibilityContext;
 @property(retain, nonatomic) NSMutableArray *impressions; // @synthesize impressions=_impressions;
 @property(retain, nonatomic) NSMutableDictionary *impresssionPayload; // @synthesize impresssionPayload=_impresssionPayload;
 @property(retain, nonatomic) NSMutableDictionary *firedPixels; // @synthesize firedPixels=_firedPixels;
@@ -115,9 +119,12 @@
 - (void)postDownvote:(id)arg1;
 - (void)postUpvote:(id)arg1;
 - (void)postClick:(id)arg1;
+- (void)onVideoVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
 - (void)postVideoVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
+- (void)onVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
 - (void)postVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
 - (void)blankVisible:(id)arg1;
+- (void)appDidBecomeActive;
 - (void)appWillResignActive;
 - (void)appDidFinishLaunching;
 - (id)createMetadataWithPayload:(id)arg1;

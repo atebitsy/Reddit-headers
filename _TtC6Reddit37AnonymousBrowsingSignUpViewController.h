@@ -9,13 +9,14 @@
 @interface _TtC6Reddit37AnonymousBrowsingSignUpViewController : BaseViewController
 {
     // Error parsing type: , name: accountContext
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithAccountContext:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 delegate:(id)arg2;
 
 @end
 

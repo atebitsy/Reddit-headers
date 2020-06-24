@@ -9,6 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 #import "PagedTabControllerProtocol-Protocol.h"
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
+#import "RailsAnalyticsProtocol-Protocol.h"
 #import "RailsPresentable-Protocol.h"
 #import "SearchCollectionViewLayoutDelegate-Protocol.h"
 #import "SearchPageViewControllerProtocol-Protocol.h"
@@ -16,7 +17,7 @@
 @class FeedPresenter, IGListIndexPathResult, NSArray, NSString, NSURL, RailsContext, RailsNavigator, RailsPresenter, SearchViewController, UIScrollView;
 @protocol IGListDiffable;
 
-@interface RailsViewController : FeedViewController <ObjectObserverProtocol, RUIThemeUpdateCallbackProtocol, SearchCollectionViewLayoutDelegate, SearchPageViewControllerProtocol, PagedTabControllerProtocol, RailsPresentable>
+@interface RailsViewController : FeedViewController <ObjectObserverProtocol, RUIThemeUpdateCallbackProtocol, SearchCollectionViewLayoutDelegate, RailsAnalyticsProtocol, SearchPageViewControllerProtocol, PagedTabControllerProtocol, RailsPresentable>
 {
     RailsNavigator *_railsNavigator;
     SearchViewController *_searchViewController;

@@ -17,7 +17,7 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 #import "_TtP8RedditUI29RedditTabBarControllerHandler_-Protocol.h"
 
-@class BaseCollectionView, LoggedOutView, NSArray, NSString, UIScrollView;
+@class BaseCollectionView, LoggedOutView, NSArray, NSString, RedditService, UIScrollView;
 
 @interface MailListViewController : ListingViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MessagesRepliesViewControllerProcotol, InboxCellContentViewDelegate, ReportActionSheetDelegate, LoggedOutViewDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_, PagedTabControllerProtocol, ComposableInboxViewController>
 {
@@ -61,7 +61,9 @@
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (struct UIEdgeInsets)preferredContentInset;
 - (void)viewDidLayoutSubviews;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+@property(readonly, nonatomic) RedditService *service;
 - (id)initWithPresenter:(id)arg1;
 
 // Remaining properties

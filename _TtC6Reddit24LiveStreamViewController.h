@@ -22,13 +22,16 @@
     // Error parsing type: , name: thumbnailView
     // Error parsing type: , name: playerView
     // Error parsing type: , name: overlayView
+    // Error parsing type: , name: isUserInterfaceVisible
+    // Error parsing type: , name: awardsAnimator
+    // Error parsing type: , name: awardAnnouncementView
+    // Error parsing type: , name: initialAwardsStreamID
     // Error parsing type: , name: durationIsSet
     // Error parsing type: , name: shouldAutoHideTitle
     // Error parsing type: , name: activeVotingRequests
     // Error parsing type: , name: liveStreamPlaybackState
     // Error parsing type: , name: offlineErrorEncountered
     // Error parsing type: , name: titleTimer
-    // Error parsing type: , name: isViewerUIRefreshEnabled
     // Error parsing type: , name: isVideoReady
     // Error parsing type: , name: presenter
     // Error parsing type: , name: awardAnnouncementFrame

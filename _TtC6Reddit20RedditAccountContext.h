@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, AccountManager, AdEventsManager, AnalyticsManager, AppSettings, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit24RedditMuxAnalyticsLogger, _TtC6Reddit25StreamingHeartbeatService;
+@class Account, AccountManager, AdEventsManager, AnalyticsManager, AppSettings, ConfigManager, ExperimentManager, GivenAwardsManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit24RedditMuxAnalyticsLogger, _TtC6Reddit25StreamingHeartbeatService;
 @protocol ViewContext;
 
 @interface _TtC6Reddit20RedditAccountContext : NSObject
@@ -14,7 +14,6 @@
     // Error parsing type: , name: accountManager
     // Error parsing type: , name: redditService
     // Error parsing type: , name: rui
-    // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: visibilityTracker
     // Error parsing type: , name: identityProviderService
     // Error parsing type: , name: streamingHeartbeatService
@@ -28,18 +27,18 @@
 @property(nonatomic, readonly) AdEventsManager *adEventsManager;
 @property(nonatomic, readonly) SubredditManager *subredditManager;
 @property(nonatomic, readonly) GivenAwardsManager *givenAwardsManager;
-@property(nonatomic, readonly) LegacyExperimentManager *legacyExperimentManager;
+@property(nonatomic, readonly) ConfigManager *configManager;
 @property(nonatomic, readonly) ExperimentManager *experimentManager;
+@property(nonatomic, readonly) AnalyticsManager *analyticsManager;
 @property(nonatomic, readonly) Account *account;
 @property(nonatomic, readonly) id <ViewContext> viewContext;
-- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 analyticsManager:(id)arg4 visibilityTracker:(id)arg5 identityProviderService:(id)arg6 streamingHeartbeatService:(id)arg7 anonymousModeManager:(id)arg8 redditMuxAnalyticsLogger:(id)arg9 appSettings:(id)arg10;
+- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 visibilityTracker:(id)arg4 identityProviderService:(id)arg5 streamingHeartbeatService:(id)arg6 anonymousModeManager:(id)arg7 redditMuxAnalyticsLogger:(id)arg8 appSettings:(id)arg9;
 @property(nonatomic, readonly) AppSettings *appSettings; // @synthesize appSettings;
 @property(nonatomic, readonly) _TtC6Reddit24RedditMuxAnalyticsLogger *redditMuxAnalyticsLogger; // @synthesize redditMuxAnalyticsLogger;
 @property(nonatomic, readonly) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager;
 @property(nonatomic, readonly) _TtC6Reddit25StreamingHeartbeatService *streamingHeartbeatService; // @synthesize streamingHeartbeatService;
 @property(nonatomic, readonly) _TtC6Reddit23IdentityProviderService *identityProviderService; // @synthesize identityProviderService;
 @property(nonatomic, readonly) VisibilityTracker *visibilityTracker; // @synthesize visibilityTracker;
-@property(nonatomic, readonly) AnalyticsManager *analyticsManager; // @synthesize analyticsManager;
 @property(nonatomic, readonly) RUI *rui; // @synthesize rui;
 @property(nonatomic, readonly) RedditService *redditService; // @synthesize redditService;
 @property(nonatomic, readonly) AccountManager *accountManager; // @synthesize accountManager;

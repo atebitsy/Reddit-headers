@@ -34,7 +34,7 @@
 - (void)setupViews;
 - (void)setupSaleLabelWithCoins:(id)arg1;
 - (void)handleCellDidTap:(id)arg1;
-- (void)configureWithProduct:(id)arg1 forAccount:(id)arg2;
+- (void)configureWithProduct:(id)arg1 action:(CDUnknownBlockType)arg2;
 - (void)prepareForReuse;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

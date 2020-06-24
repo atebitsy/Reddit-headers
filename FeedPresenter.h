@@ -7,13 +7,12 @@
 #import "ListingPresenter.h"
 
 #import "DiscoveryUnitViewModelDataProviderDelegate-Protocol.h"
-#import "ListingAnalyticsProtocol-Protocol.h"
 #import "TemplateParserContext-Protocol.h"
 
 @class Account, AdsDataProvider, DiscoveryUnitViewModelDataProvider, FeedPostOptions, LayoutGuidance, ListingChangeBuffer, MediaPostDataProvider, NSArray, NSIndexPath, NSOrderedSet, NSString, PostCollectionOptions, SuspendedBannerModel, VisibilityTracker;
 @protocol FeedPresentable;
 
-@interface FeedPresenter : ListingPresenter <DiscoveryUnitViewModelDataProviderDelegate, TemplateParserContext, ListingAnalyticsProtocol>
+@interface FeedPresenter : ListingPresenter <DiscoveryUnitViewModelDataProviderDelegate, TemplateParserContext>
 {
     _Bool _shouldFilterNsfwForNonLoggedInAccounts;
     _Bool _shouldSupportGallery;
@@ -115,7 +114,7 @@
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 @property(readonly, nonatomic) NSString *analyticsScreenViewName;
-@property(readonly, nonatomic) NSString *analyticsCorrelationId;
+- (id)analyticsCorrelationId;
 - (unsigned long long)indexMatchingPost:(id)arg1 inObjects:(id)arg2;
 - (void)unfollowEventPost:(id)arg1;
 - (void)followEventPost:(id)arg1;

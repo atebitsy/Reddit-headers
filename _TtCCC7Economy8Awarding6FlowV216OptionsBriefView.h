@@ -15,6 +15,7 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
+- (void)editOptions;
 - (id)initWithCoder:(id)arg1;
 
 @end

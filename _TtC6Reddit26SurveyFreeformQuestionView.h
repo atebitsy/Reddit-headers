@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit26SurveyFreeformQuestionView : UIView
 {
+    // Error parsing type: , name: viewModel
     // Error parsing type: , name: response
     // Error parsing type: , name: delegate
     // Error parsing type: , name: bottomConstraint

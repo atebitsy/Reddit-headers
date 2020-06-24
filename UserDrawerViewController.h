@@ -12,7 +12,7 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 #import "_TtP6Reddit35AccountStatusViewControllerDelegate_-Protocol.h"
 
-@class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseNavigationViewController, BaseTableView, BaseView, ChatAvatarImageView, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager;
+@class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseNavigationViewController, BaseTableView, BaseView, ChatAvatarImageView, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager, _TtC6Reddit27EditUsernameFlowCoordinator;
 @protocol AccountContext, BaseStoreObservation;
 
 @interface UserDrawerViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit35AccountStatusViewControllerDelegate_, UIViewControllerTransitioningDelegate, ProfileDrawerStatsDelegate>
@@ -20,6 +20,7 @@
     UIPercentDrivenInteractiveTransition *_interactiveTransition;
     id <AccountContext> _accountContext;
     _TtC6Reddit24MetaWalletBalanceManager *_balanceManager;
+    _TtC6Reddit27EditUsernameFlowCoordinator *_editUsernameFlowCoordinator;
     BaseView *_background;
     BaseView *_drawerPanel;
     BaseButton *_closeButton;
@@ -60,11 +61,14 @@
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) BaseView *drawerPanel; // @synthesize drawerPanel=_drawerPanel;
 @property(retain, nonatomic) BaseView *background; // @synthesize background=_background;
+@property(retain, nonatomic) _TtC6Reddit27EditUsernameFlowCoordinator *editUsernameFlowCoordinator; // @synthesize editUsernameFlowCoordinator=_editUsernameFlowCoordinator;
 @property(retain, nonatomic) _TtC6Reddit24MetaWalletBalanceManager *balanceManager; // @synthesize balanceManager=_balanceManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
 - (void)karmaTapped;
 - (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
+- (void)navigateToUserProfile;
+- (void)navigateToUserProfileWithGating;
 - (void)showAnonymousBrowsingTooltipIfNeeded;
 - (id)presentationControllerForPresentedViewController:(id)arg1 presentingViewController:(id)arg2 sourceViewController:(id)arg3;
 - (id)interactionControllerForDismissal:(id)arg1;

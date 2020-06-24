@@ -6,15 +6,13 @@
 
 #import <UIKit/UIView.h>
 
-#import <Economy/GoldCoinMarketingPageHeaderCellDelegate-Protocol.h>
-#import <Economy/GoldProductTableViewCellDelegate-Protocol.h>
 #import <Economy/UITableViewDataSource-Protocol.h>
 #import <Economy/UITableViewDelegate-Protocol.h>
 
 @class BaseTableView, FeedSpinnerView, NSArray, NSLayoutConstraint, NSString, RedditService, UIImageView;
 @protocol GoldCoinMarketingListDelegate;
 
-@interface GoldCoinMarketingList : UIView <UITableViewDataSource, UITableViewDelegate, GoldProductTableViewCellDelegate, GoldCoinMarketingPageHeaderCellDelegate>
+@interface GoldCoinMarketingList : UIView <UITableViewDataSource, UITableViewDelegate>
 {
     _Bool _isEconStorefrontClaimEnabled;
     RedditService *_service;
@@ -42,8 +40,6 @@
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
-- (void)goldProductTableViewCellDidTap:(id)arg1;
-- (void)goldCoinMarketingPageHeaderCellDidTapLearnMore:(id)arg1;
 - (void)hideLoadingIndicator;
 - (void)showLoadingIndicator;
 - (void)fetchGoldProductsIfNecessary;
@@ -52,7 +48,7 @@
 - (void)handleFetchFailure;
 - (void)handleFetchSuccess;
 - (void)layoutSubviews;
-- (id)initWithService:(id)arg1 preferredContentInset:(struct UIEdgeInsets)arg2 maxContentWidth:(double)arg3 delegate:(id)arg4;
+- (id)initWithService:(id)arg1 preferredContentInset:(struct UIEdgeInsets)arg2 maxContentWidth:(double)arg3 isEconStorefrontClaimEnabled:(_Bool)arg4 delegate:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

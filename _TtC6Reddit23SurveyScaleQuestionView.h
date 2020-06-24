@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit23SurveyScaleQuestionView : UIView
 {
+    // Error parsing type: , name: viewModel
     // Error parsing type: , name: value
     // Error parsing type: , name: delegate
     // Error parsing type: , name: sliderControl

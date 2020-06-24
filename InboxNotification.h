@@ -11,6 +11,7 @@
 @interface InboxNotification : ObservableObject
 {
     _Bool _isUnread;
+    _Bool _isUnviewed;
     unsigned long long _type;
     NSString *_pk;
     NSString *_title;
@@ -27,6 +28,7 @@
 + (_Bool)isKindEqualToComment:(id)arg1;
 + (id)keyPathsToObserveChanges;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isUnviewed; // @synthesize isUnviewed=_isUnviewed;
 @property(nonatomic) _Bool isUnread; // @synthesize isUnread=_isUnread;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(copy, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;

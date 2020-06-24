@@ -10,6 +10,7 @@
 #import "HeaderBarViewDelegate-Protocol.h"
 #import "InboxActivityPresentable-Protocol.h"
 #import "LoggedOutViewDelegate-Protocol.h"
+#import "NotificationCellDelegate-Protocol.h"
 #import "PagedTabControllerProtocol-Protocol.h"
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 #import "ReportActionSheetDelegate-Protocol.h"
@@ -20,7 +21,7 @@
 
 @class BaseCollectionView, InboxActivityPresenter, LoggedOutView, NSString, NSURL, RedditService, UIScrollView;
 
-@interface ActivityViewController : ListingViewController <UICollectionViewDelegate, UICollectionViewDataSource, InboxActivityPresentable, UICollectionViewDelegateFlowLayout, ReportActionSheetDelegate, HeaderBarViewDelegate, RUIActionSheetViewControllerDelegate, LoggedOutViewDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_, PagedTabControllerProtocol, ComposableInboxViewController>
+@interface ActivityViewController : ListingViewController <UICollectionViewDelegate, UICollectionViewDataSource, InboxActivityPresentable, UICollectionViewDelegateFlowLayout, ReportActionSheetDelegate, HeaderBarViewDelegate, RUIActionSheetViewControllerDelegate, LoggedOutViewDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_, PagedTabControllerProtocol, ComposableInboxViewController, NotificationCellDelegate>
 {
     BaseCollectionView *_collectionView;
     LoggedOutView *_loggedOutView;
@@ -46,6 +47,7 @@
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)headerBarViewDidTapRightButton:(id)arg1;
 - (void)headerBarViewDidTapLeftButton:(id)arg1;
+- (void)notificationCellDidBecomeFullyVisible:(id)arg1;
 - (void)didTapOverflowButton:(id)arg1;
 - (id)collectionView:(id)arg1 viewForSupplementaryElementOfKind:(id)arg2 atIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplaySupplementaryView:(id)arg2 forElementKind:(id)arg3 atIndexPath:(id)arg4;

@@ -7,19 +7,19 @@
 #import "BaseViewController.h"
 
 #import "GoldCoinMarketingListDelegate-Protocol.h"
+#import "GoldCoinMarketingListV2Delegate-Protocol.h"
 #import "InAppPurchaseManagerDelegate-Protocol.h"
 
-@class GoldCoinMarketingList, GoldProduct, NSString, RedditService, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit34GoldUpsellImagePopupViewController;
+@class GoldProduct, NSString, RedditService, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit34GoldUpsellImagePopupViewController;
 @protocol AccountContext;
 
-@interface GoldCoinMarketingPageViewController : BaseViewController <InAppPurchaseManagerDelegate, GoldCoinMarketingListDelegate>
+@interface GoldCoinMarketingPageViewController : BaseViewController <InAppPurchaseManagerDelegate, GoldCoinMarketingListDelegate, GoldCoinMarketingListV2Delegate>
 {
     GoldProduct *_purchasingProduct;
     id <AccountContext> _accountContext;
     NSString *_correlationId;
     NSString *_sourcePage;
     _TtC6Reddit24CoinMarketingEventLogger *_eventLogger;
-    GoldCoinMarketingList *_list;
     _TtC6Reddit34GoldUpsellImagePopupViewController *_dealPopupController;
     GoldProduct *_targetedOfferDeal;
 }
@@ -27,7 +27,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) GoldProduct *targetedOfferDeal; // @synthesize targetedOfferDeal=_targetedOfferDeal;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *dealPopupController; // @synthesize dealPopupController=_dealPopupController;
-@property(retain, nonatomic) GoldCoinMarketingList *list; // @synthesize list=_list;
 @property(readonly, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *sourcePage; // @synthesize sourcePage=_sourcePage;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
@@ -47,10 +46,18 @@
 - (void)inAppPurchaseManager:(id)arg1 transactionDidSucceedWithId:(id)arg2 correlationId:(id)arg3;
 - (void)inAppPurchaseManager:(id)arg1 transactionDidBeginValidationWithId:(id)arg2 correlationId:(id)arg3;
 - (void)inAppPurchaseManagerDidBeginTransaction:(id)arg1 correlationId:(id)arg2;
+- (void)goldCoinMarketingListV2:(id)arg1 presentErrorMessage:(id)arg2;
+- (void)goldCoinMarketingListV2:(id)arg1 purchaseProduct:(id)arg2;
+- (void)presentFreeAwardFromGoldCoinMarketingListV2:(id)arg1;
+- (void)learnAboutCoinsFromGoldCoinMarketingListV2:(id)arg1;
 - (void)goldCoinMarketingList:(id)arg1 presentErrorMessage:(id)arg2;
 - (void)goldCoinMarketingList:(id)arg1 purchaseProduct:(id)arg2;
 - (void)presentFreeAwardFromGoldCoinMarketingList:(id)arg1;
 - (void)learnAboutCoinsFromGoldCoinMarketingList:(id)arg1;
+- (void)presentErrorMessage:(id)arg1;
+- (void)launchFlowForPurchaseProduct:(id)arg1;
+- (void)presentFreeAward;
+- (void)learnMore;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

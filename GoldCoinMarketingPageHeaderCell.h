@@ -7,11 +7,10 @@
 #import <RedditUI/BaseTableViewCell.h>
 
 @class UIButton, UIImageView, UILabel, UIStackView;
-@protocol GoldCoinMarketingPageHeaderCellDelegate;
 
 @interface GoldCoinMarketingPageHeaderCell : BaseTableViewCell
 {
-    id <GoldCoinMarketingPageHeaderCellDelegate> _delegate;
+    CDUnknownBlockType _learnMore;
     UIImageView *_bannerImageView;
     UIImageView *_logoImageView;
     UILabel *_headerTextLabel;
@@ -31,10 +30,10 @@
 @property(retain, nonatomic) UILabel *headerTextLabel; // @synthesize headerTextLabel=_headerTextLabel;
 @property(retain, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(retain, nonatomic) UIImageView *bannerImageView; // @synthesize bannerImageView=_bannerImageView;
-@property(nonatomic) __weak id <GoldCoinMarketingPageHeaderCellDelegate> delegate; // @synthesize delegate=_delegate;
+@property(copy, nonatomic) CDUnknownBlockType learnMore; // @synthesize learnMore=_learnMore;
 - (void)setupViews;
 - (void)learnMoreButtonDidTap:(id)arg1;
-- (void)configureWithViewModel:(id)arg1;
+- (void)configureWithViewModel:(id)arg1 learnMore:(CDUnknownBlockType)arg2;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

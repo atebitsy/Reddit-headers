@@ -26,7 +26,6 @@ __attribute__((visibility("hidden")))
 }
 
 - (void).cxx_destruct;
-- (void)editOptions;
 - (void)sendAward;
 - (void)layoutSubviews;
 - (void)updateCountdown;

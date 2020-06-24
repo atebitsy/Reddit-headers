@@ -36,7 +36,7 @@
 + (id)timerWithType:(id)arg1;
 + (id)analyticsParamForFeedRange:(unsigned long long)arg1;
 + (id)currentBrowserTypeName:(id)arg1;
-+ (id)analyticsPlatformWithAppSettings:(id)arg1;
++ (id)analyticsPlatformWithAppSettings:(id)arg1 deviceId:(id)arg2;
 + (id)mediaWithHlsPlayer:(id)arg1;
 + (id)listingWithCommentDepth:(id)arg1;
 + (id)listingWithCommentSort:(unsigned long long)arg1 previousCommentSort:(unsigned long long)arg2 source:(id)arg3;

@@ -31,6 +31,7 @@
 - (void)fetchData;
 - (void)applicationDidBecomeActive:(id)arg1;
 @property(nonatomic, readonly) struct UIEdgeInsets preferredContentInset;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithAccountContext:(id)arg1;
 

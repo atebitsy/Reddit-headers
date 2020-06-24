@@ -10,16 +10,14 @@
 {
     // Error parsing type: , name: closeButton
     // Error parsing type: , name: broadcastButton
-    // Error parsing type: , name: redditWatermark
-    // Error parsing type: , name: subredditLabelButton
     // Error parsing type: , name: buttonsHidden
     // Error parsing type: , name: gradientView
-    // Error parsing type: , name: experimentManager
     // Error parsing type: , name: gradientHeightConstraint
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)init;
 - (id)initWithCoder:(id)arg1;
 
 @end

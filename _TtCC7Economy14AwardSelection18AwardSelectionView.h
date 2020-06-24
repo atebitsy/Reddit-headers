@@ -14,6 +14,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: eventLogger
     // Error parsing type: , name: theme
     // Error parsing type: , name: model
+    // Error parsing type: , name: selectedMiniPillViewModel
     // Error parsing type: , name: delegate
     // Error parsing type: , name: selectedAwardViewModel
     // Error parsing type: , name: keyboardFrame
@@ -23,6 +24,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: containerView
     // Error parsing type: , name: stackView
     // Error parsing type: , name: messageEditor
+    // Error parsing type: , name: miniPillBar
     // Error parsing type: , name: awardList
     // Error parsing type: , name: coinsBar
     // Error parsing type: , name: keyboardPlaceholderView

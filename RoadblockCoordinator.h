@@ -38,8 +38,6 @@
 - (void)imagePopupViewControllerDidClose:(id)arg1;
 - (void)imagePopupViewController:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)__startWithRoadblockViewModel:(id)arg1;
-- (void)__startWithError:(id)arg1 forSubredditNamed:(id)arg2;
-- (void)__startWithError:(id)arg1;
 - (void)__startWithRoadblockable:(id)arg1 originURL:(id)arg2;
 - (void)startWithRoadblockable:(id)arg1 originURL:(id)arg2;
 - (void)startWithError:(id)arg1 forSubredditNamed:(id)arg2;

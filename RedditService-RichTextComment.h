@@ -6,7 +6,7 @@
 
 #import <RedditCore/RedditService.h>
 
-@class AdEventsManager, BadgeCountManager, ChatMessageStore, ChatNetworkManager, ChatSubredditMessageStore, ContactByChannelStore, ContactStore, ContentDiskCacheManager, CrosspostManager, DatabaseManager, DirectChannelStore, FocusVerticalManager, InitialHomeFeedController, LegacyExperimentManager, LocationFilterManager, LoggedOutHiddenPostManager, MetaManager, NSSet, NewsPersonalizationManager, PostCommentCache, PostHistoryManager, PostSubmissionManager, PreferenceSyncManager, RecentChatPostManager, SubredditChannelStore, SubredditListManager, SubredditManager, SubscribedSubredditsManager, UploadRequestManager, _TtC6Reddit13SurveyManager;
+@class AdEventsManager, AnalyticsManager, BadgeCountManager, ChatMessageStore, ChatNetworkManager, ChatSubredditMessageStore, ConfigManager, ContactByChannelStore, ContactStore, ContentDiskCacheManager, CrosspostManager, DatabaseManager, DirectChannelStore, FocusVerticalManager, InitialHomeFeedController, LocationFilterManager, LoggedOutHiddenPostManager, MetaManager, NSSet, NewsPersonalizationManager, PostCommentCache, PostHistoryManager, PostSubmissionManager, PreferenceSyncManager, RecentChatPostManager, SubredditChannelStore, SubredditListManager, SubredditManager, SubscribedSubredditsManager, UploadRequestManager, _TtC6Reddit13SurveyManager;
 
 @interface RedditService (RichTextComment)
 - (void)editComment:(id)arg1 withText:(id)arg2 isRichText:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
@@ -36,6 +36,7 @@
 @property(readonly, nonatomic) ChatMessageStore *chatMessageStore;
 - (void)createChatStores;
 @property(readonly, nonatomic) DatabaseManager *dbManager;
+@property(readonly, nonatomic) AnalyticsManager *analyticsManager;
 @property(readonly, nonatomic) AdEventsManager *adEventsManager;
 @property(readonly, nonatomic) FocusVerticalManager *focusVerticalManager;
 @property(readonly, nonatomic) SubredditManager *subredditManager;
@@ -46,7 +47,7 @@
 @property(readonly, nonatomic) SubscribedSubredditsManager *subscribedSubredditsManager;
 @property(readonly, nonatomic) PostCommentCache *postCommentCache;
 @property(readonly, nonatomic) ChatNetworkManager *chatNetworkManager;
-@property(readonly, nonatomic) LegacyExperimentManager *legacyExperimentManager;
+@property(readonly, nonatomic) ConfigManager *configManager;
 @property(readonly, nonatomic) LoggedOutHiddenPostManager *loggedOutHiddenPostManager;
 @property(readonly, nonatomic) InitialHomeFeedController *initialHomeFeedController;
 @property(readonly, nonatomic) BadgeCountManager *badgeManager;
