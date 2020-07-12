@@ -7,6 +7,7 @@
 @protocol _TtP6Reddit12UserCardView_;
 
 @protocol _TtP6Reddit20UserCardViewDelegate_
+- (void)userCardViewDidQuickChat:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestStartChat:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestViewProfile:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestInvite:(id <_TtP6Reddit12UserCardView_>)arg1;

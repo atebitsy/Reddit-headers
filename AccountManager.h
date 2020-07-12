@@ -45,14 +45,15 @@
 - (void)signUpWithUsername:(id)arg1 password:(id)arg2 email:(id)arg3 emailPermission:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)loginWithUsername:(id)arg1 password:(id)arg2 twoFactorAuthCode:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)saveAccount:(id)arg1;
+- (void)removeAnonymousService:(id)arg1;
+- (void)switchToAnonymousAccountWithService:(id)arg1;
+- (id)createAnonymousService;
 - (void)handleAccountUpdated:(id)arg1;
 - (id)serviceForAccountPk:(id)arg1;
 - (id)serviceForAccount:(id)arg1;
 - (id)accountForPk:(id)arg1;
 - (void)removeAccount:(id)arg1 deletingAccountData:(_Bool)arg2;
 - (void)addService:(id)arg1;
-- (id)createAnonymousService;
-- (void)switchToAnonymousAccountWithService:(id)arg1;
 - (void)switchToService:(id)arg1;
 - (void)switchToLoggedOutAccount;
 @property(readonly, nonatomic) Account *currentAccount;

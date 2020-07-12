@@ -6,7 +6,7 @@
 
 #import "BaseFeedDisplayNode.h"
 
-@class ASDisplayNode, _TtC11RedditVideo15RedditVideoView, _TtC11RedditVideo21RedditVideoPlayerView;
+@class ASDisplayNode, NSNumber, _TtC11RedditVideo15RedditVideoView, _TtC11RedditVideo21RedditVideoPlayerView;
 
 @interface _TtC6Reddit15RedditVideoNode : BaseFeedDisplayNode
 {
@@ -21,6 +21,7 @@
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterPreloadState;
 - (id)initWithViewContext:(id)arg1 options:(id)arg2 redditVideoViewBlock:(CDUnknownBlockType)arg3;
+@property(nonatomic, readonly) NSNumber *videoTimestamp;
 @property(nonatomic, readonly) _TtC11RedditVideo21RedditVideoPlayerView *redditVideoPlayerView;
 @property(nonatomic, readonly) _TtC11RedditVideo15RedditVideoView *redditVideoView;
 @property(nonatomic, readonly) ASDisplayNode *node; // @synthesize node;

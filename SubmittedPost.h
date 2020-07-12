@@ -23,6 +23,7 @@
     NSString *_linkURL;
     NSString *_imageLinkURL;
     NSString *_selfText;
+    NSArray *_mediaGallery;
     UIImage *_image;
     NSString *_videoFilename;
     NSURL *_videoURL;
@@ -81,6 +82,7 @@
 @property(retain, nonatomic) NSURL *videoURL; // @synthesize videoURL=_videoURL;
 @property(copy, nonatomic) NSString *videoFilename; // @synthesize videoFilename=_videoFilename;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
+@property(retain, nonatomic) NSArray *mediaGallery; // @synthesize mediaGallery=_mediaGallery;
 @property(copy, nonatomic) NSString *selfText; // @synthesize selfText=_selfText;
 @property(copy, nonatomic) NSString *imageLinkURL; // @synthesize imageLinkURL=_imageLinkURL;
 @property(copy, nonatomic) NSString *linkURL; // @synthesize linkURL=_linkURL;
@@ -92,6 +94,7 @@
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) _Bool hasImage;
+@property(readonly, nonatomic) _Bool hasMediaGallery;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithPk:(id)arg1;

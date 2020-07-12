@@ -24,6 +24,7 @@
 - (void)uploadToAmazonS3:(id)arg1 attachPost:(id)arg2 withFilepath:(id)arg3 successHandler:(CDUnknownBlockType)arg4 progressHandler:(CDUnknownBlockType)arg5 failureHandler:(CDUnknownBlockType)arg6;
 - (void)uploadVideoFilePath:(id)arg1 attachPost:(id)arg2 successHandler:(CDUnknownBlockType)arg3 progressHandler:(CDUnknownBlockType)arg4 failureHandler:(CDUnknownBlockType)arg5;
 - (void)uploadImageFilePath:(id)arg1 apiUrl:(id)arg2 parameters:(id)arg3 successHandler:(CDUnknownBlockType)arg4 progressHandler:(CDUnknownBlockType)arg5 failureHandler:(CDUnknownBlockType)arg6;
+- (void)uploadMediaGalleryImageWithFilePath:(id)arg1 successHandler:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3 failureHandler:(CDUnknownBlockType)arg4;
 - (void)uploadImageFilePath:(id)arg1 successHandler:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3 failureHandler:(CDUnknownBlockType)arg4;
 @property(readonly, nonatomic) _Bool isUploading;
 - (id)initWithService:(id)arg1;

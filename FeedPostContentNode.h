@@ -16,8 +16,8 @@
 {
     _Bool _hasTextContent;
     Post *_post;
-    FeedPostTextWithThumbnailNode *_textNode;
     ASDisplayNode *_contentNode;
+    FeedPostTextWithThumbnailNode *_textNode;
     FeedPostCallToActionNode *_callToActionNode;
     FeedPostOptions *_options;
     PostMetaViewModel *_postMetaViewModel;
@@ -31,8 +31,8 @@
 @property(readonly, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) FeedPostCallToActionNode *callToActionNode; // @synthesize callToActionNode=_callToActionNode;
-@property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) FeedPostTextWithThumbnailNode *textNode; // @synthesize textNode=_textNode;
+@property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)noLongerPastVisibilityThreshold;

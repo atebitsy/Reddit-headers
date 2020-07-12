@@ -7,5 +7,6 @@
 #import <Foundation/NSProcessInfo.h>
 
 @interface NSProcessInfo (RedditFoundation)
+@property(readonly, nonatomic) _Bool isExecutingTests;
 @end
 

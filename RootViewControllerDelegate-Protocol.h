@@ -6,12 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol AccountContext;
+@class RedditService;
 
 @protocol RootViewControllerDelegate <NSObject>
-- (void)configureWithAccountContext:(id <AccountContext>)arg1;
 - (void)rootViewControllerDidInstallNewMainTabBar;
-- (void)showPushNotificationPromptIfNeededWithCompletion:(void (^)(void))arg1;
-- (void)refreshConfig;
+- (void)showPushNotificationPromptIfNeededWithService:(RedditService *)arg1 completion:(void (^)(void))arg2;
+- (void)refreshConfigWithService:(RedditService *)arg1;
 @end
 

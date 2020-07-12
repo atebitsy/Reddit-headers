@@ -11,7 +11,6 @@
     // Error parsing type: , name: triggerEvent
     // Error parsing type: , name: surveyId
     // Error parsing type: , name: experimentName
-    // Error parsing type: , name: surveyCooldownDays
     // Error parsing type: , name: variants
     // Error parsing type: , name: surveySteps
 }

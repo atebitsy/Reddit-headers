@@ -29,6 +29,7 @@
     _Bool _didLoadSortBarOnce;
     _Bool _shouldHideCloseButtonInWelcomeBanners;
     _Bool _hasViewedGoldBanner;
+    _Bool _didFireSurveyScrollEventOnFeed;
     FeedViewController *_feedVC;
     FeedViewController<FeedViewControllerInterface><FeedPresentable> *_textureFeedVC;
     long long _numberOfPostsToScrollBeforeShowingLoggedOutVoteTooltip;
@@ -36,6 +37,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool didFireSurveyScrollEventOnFeed; // @synthesize didFireSurveyScrollEventOnFeed=_didFireSurveyScrollEventOnFeed;
 @property(nonatomic) _Bool hasViewedGoldBanner; // @synthesize hasViewedGoldBanner=_hasViewedGoldBanner;
 @property(readonly, nonatomic) _Bool shouldHideCloseButtonInWelcomeBanners; // @synthesize shouldHideCloseButtonInWelcomeBanners=_shouldHideCloseButtonInWelcomeBanners;
 @property(nonatomic) long long indexOfLastPostSeenForTooltip; // @synthesize indexOfLastPostSeenForTooltip=_indexOfLastPostSeenForTooltip;
@@ -57,6 +59,7 @@
 - (void)scrollDidStopScrolling:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewDidScrollToTop:(id)arg1;
+- (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
 - (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:(inout struct CGPoint *)arg3;
 - (void)scrollViewDidScroll:(id)arg1;
@@ -85,6 +88,7 @@
 - (long long)numberOfItemsInSection:(long long)arg1;
 - (long long)numberOfSectionsInCollectionView:(id)arg1;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (void)resetSurveyScrollEventState;
 - (id)currentObjectsForSection:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSArray *registeredCellClasses;
 @property(readonly, nonatomic) Account *account;

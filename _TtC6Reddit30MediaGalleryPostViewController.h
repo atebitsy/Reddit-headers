@@ -23,10 +23,13 @@
 - (void)didTapPostButton:(id)arg1;
 - (id)analyticsPostComposerType;
 - (void)mediaSelectionNavigationController:(id)arg1 didSelect:(id)arg2;
+- (void)mediaSelectionNavigationControllerDidTapPhotoCell:(id)arg1;
+- (void)mediaSelectionNavigationControllerDidTapCameraCell:(id)arg1;
 - (_Bool)baseTextView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 @property(nonatomic, readonly) NSString *analyticsScreenViewName;
 - (void)dealloc;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1 images:(id)arg2;
 
 @end
 

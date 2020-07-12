@@ -15,7 +15,9 @@
     // Error parsing type: , name: currentAnnotatedImages
     // Error parsing type: , name: captionText
     // Error parsing type: , name: urlText
+    // Error parsing type: , name: saveBarButtonItem
     // Error parsing type: , name: keyboardAccessory
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: saveCallback
     // Error parsing type: , name: cancelCallback
     // Error parsing type: , name: $__lazy_storage_$_setupImages

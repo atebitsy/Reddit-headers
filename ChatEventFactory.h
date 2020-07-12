@@ -18,7 +18,7 @@
 + (id)chatSetupEventWithAction:(id)arg1 noun:(id)arg2 subreddit:(id)arg3 channel:(id)arg4;
 + (id)shareToChatEventWithAction:(id)arg1 noun:(id)arg2 post:(id)arg3 correlationId:(id)arg4 messageLength:(long long)arg5 channel:(id)arg6 existingChannel:(_Bool)arg7 fromVC:(id)arg8;
 + (id)shareEventWithAction:(id)arg1 noun:(id)arg2 post:(id)arg3 correlationId:(id)arg4 preselectedChannel:(id)arg5 position:(unsigned long long)arg6 submitSuccessful:(_Bool)arg7 fromVC:(id)arg8;
-+ (id)userHoverCardEventWithAction:(id)arg1 noun:(id)arg2 userId:(id)arg3 post:(id)arg4 comment:(id)arg5 pageType:(id)arg6;
++ (id)userHoverCardEventWithAction:(id)arg1 noun:(id)arg2 userId:(id)arg3 post:(id)arg4 comment:(id)arg5 actionInfoReason:(id)arg6 pageType:(id)arg7;
 + (id)userProfileEventWithAction:(id)arg1 noun:(id)arg2 userId:(id)arg3 pageType:(id)arg4;
 + (id)settingsEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 kickDuration:(id)arg4;
 + (id)settingsEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 reportedContact:(id)arg4 blockedContact:(id)arg5;

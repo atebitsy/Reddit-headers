@@ -17,7 +17,7 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 #import "_TtP8RedditUI29RedditTabBarControllerHandler_-Protocol.h"
 
-@class BaseCollectionView, LoggedOutView, NSArray, NSString, RedditService, UIScrollView;
+@class BaseCollectionView, LoggedOutView, NSArray, NSString, RedditService, UIScrollView, _TtC6Reddit25AuthenticationCoordinator;
 
 @interface MailListViewController : ListingViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MessagesRepliesViewControllerProcotol, InboxCellContentViewDelegate, ReportActionSheetDelegate, LoggedOutViewDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_, PagedTabControllerProtocol, ComposableInboxViewController>
 {
@@ -25,9 +25,11 @@
     LoggedOutView *_loggedOutView;
     NSArray *_currentMessages;
     NSArray *_currentMessageSubjects;
+    _TtC6Reddit25AuthenticationCoordinator *_authenticationCoordinator;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit25AuthenticationCoordinator *authenticationCoordinator; // @synthesize authenticationCoordinator=_authenticationCoordinator;
 @property(copy, nonatomic) NSArray *currentMessageSubjects; // @synthesize currentMessageSubjects=_currentMessageSubjects;
 @property(copy, nonatomic) NSArray *currentMessages; // @synthesize currentMessages=_currentMessages;
 @property(retain, nonatomic) LoggedOutView *loggedOutView; // @synthesize loggedOutView=_loggedOutView;

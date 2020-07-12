@@ -59,7 +59,9 @@
 - (void)navigateToModQueueForModSubreddit:(id)arg1;
 - (void)navigateToPostModerationForPost:(id)arg1 fromView:(id)arg2 hideModerateBarActions:(_Bool)arg3 delegate:(id)arg4;
 - (void)navigateToRUIActionSheetItems:(id)arg1 fromSender:(id)arg2 delegate:(id)arg3;
+- (void)navigateToActionSheetForPost:(id)arg1 withVideoTimestamp:(id)arg2 withConfiguration:(id)arg3 fromView:(id)arg4 withPostActionSheetDelegate:(id)arg5;
 - (void)navigateToActionSheetForPost:(id)arg1 withConfiguration:(id)arg2 fromView:(id)arg3 withPostActionSheetDelegate:(id)arg4;
+- (void)navigateToActionSheetForPost:(id)arg1 withVideoTimestamp:(id)arg2 fromView:(id)arg3 postActionSheetDelegate:(id)arg4;
 - (void)navigateToActionSheetForPost:(id)arg1 fromView:(id)arg2 postActionSheetDelegate:(id)arg3;
 - (void)markPostVisitedAndAddToHistory:(id)arg1;
 - (_Bool)navigateIfPossibleToDeeplinkURL:(id)arg1 ofPost:(id)arg2;

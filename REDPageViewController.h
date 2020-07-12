@@ -18,7 +18,6 @@
     _Bool _isScrolling;
     _Bool _skipDidScroll;
     _Bool _scrollingAnimated;
-    _Bool _activeControllerBeganTransition;
     id <REDPageViewControllerDelegate> _delegate;
     id <REDPageViewControllerDataSource> _dataSource;
     UIViewController *_activeController;
@@ -26,6 +25,8 @@
     UIViewController *_leftController;
     UIViewController *_rightController;
     UIViewController *_selectingController;
+    UIViewController *_startingTransitionController;
+    UIViewController *_destinationTransitionController;
     long long _scrollingDirection;
     CDUnknownBlockType _didFinishSettingCompletionHandler;
 }
@@ -33,10 +34,11 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType didFinishSettingCompletionHandler; // @synthesize didFinishSettingCompletionHandler=_didFinishSettingCompletionHandler;
 @property(nonatomic) long long scrollingDirection; // @synthesize scrollingDirection=_scrollingDirection;
-@property(nonatomic) _Bool activeControllerBeganTransition; // @synthesize activeControllerBeganTransition=_activeControllerBeganTransition;
 @property(nonatomic) _Bool scrollingAnimated; // @synthesize scrollingAnimated=_scrollingAnimated;
 @property(nonatomic) _Bool skipDidScroll; // @synthesize skipDidScroll=_skipDidScroll;
 @property(nonatomic) _Bool isScrolling; // @synthesize isScrolling=_isScrolling;
+@property(retain, nonatomic) UIViewController *destinationTransitionController; // @synthesize destinationTransitionController=_destinationTransitionController;
+@property(retain, nonatomic) UIViewController *startingTransitionController; // @synthesize startingTransitionController=_startingTransitionController;
 @property(retain, nonatomic) UIViewController *selectingController; // @synthesize selectingController=_selectingController;
 @property(retain, nonatomic) UIViewController *rightController; // @synthesize rightController=_rightController;
 @property(retain, nonatomic) UIViewController *leftController; // @synthesize leftController=_leftController;
@@ -46,8 +48,13 @@
 @property(nonatomic) __weak id <REDPageViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <REDPageViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
+- (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
+- (void)completeAllTransitions;
+- (void)cancelStartingTransition;
+- (void)cancelDestinationTransition;
+- (void)processTransitions;
 - (void)didFinishScrollingToViewController:(id)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)addChildController:(id)arg1;
@@ -58,7 +65,7 @@
 - (void)layoutViews;
 - (void)scrollToContentOffset:(struct CGPoint)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setActiveViewController:(id)arg1 direction:(long long)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)resetViewControllers;
+- (void)resetViewControllersWithNewActiveController:(id)arg1;
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 

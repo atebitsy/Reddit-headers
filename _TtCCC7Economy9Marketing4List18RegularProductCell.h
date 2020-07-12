@@ -15,8 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: productDetailsLabel
     // Error parsing type: , name: productFeaturedView
     // Error parsing type: , name: productActionButton
-    // Error parsing type: , name: action
-    // Error parsing type: , name: product
+    // Error parsing type: , name: viewModel
 }
 
 - (void).cxx_destruct;

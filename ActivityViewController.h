@@ -19,16 +19,18 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 #import "_TtP8RedditUI29RedditTabBarControllerHandler_-Protocol.h"
 
-@class BaseCollectionView, InboxActivityPresenter, LoggedOutView, NSString, NSURL, RedditService, UIScrollView;
+@class BaseCollectionView, InboxActivityPresenter, LoggedOutView, NSString, NSURL, RedditService, UIScrollView, _TtC6Reddit25AuthenticationCoordinator;
 
 @interface ActivityViewController : ListingViewController <UICollectionViewDelegate, UICollectionViewDataSource, InboxActivityPresentable, UICollectionViewDelegateFlowLayout, ReportActionSheetDelegate, HeaderBarViewDelegate, RUIActionSheetViewControllerDelegate, LoggedOutViewDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_, PagedTabControllerProtocol, ComposableInboxViewController, NotificationCellDelegate>
 {
     BaseCollectionView *_collectionView;
     LoggedOutView *_loggedOutView;
+    _TtC6Reddit25AuthenticationCoordinator *_authenticationCoordinator;
 }
 
 + (id)nameForFilterType:(unsigned long long)arg1;
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit25AuthenticationCoordinator *authenticationCoordinator; // @synthesize authenticationCoordinator=_authenticationCoordinator;
 @property(retain, nonatomic) LoggedOutView *loggedOutView; // @synthesize loggedOutView=_loggedOutView;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 - (void)logAnalyticsEventWithAction:(id)arg1 notification:(id)arg2;

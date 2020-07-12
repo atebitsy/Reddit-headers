@@ -10,15 +10,17 @@
 #import "MainFeedPresentable-Protocol.h"
 #import "_TtP6Reddit33AnonymousBrowsingExitViewDelegate_-Protocol.h"
 
-@class EmptyFeedNUXView, FeedPresenter, NSString, NSURL, _TtC6Reddit25AnonymousBrowsingExitView;
+@class EmptyFeedNUXView, FeedPresenter, NSString, NSURL, _TtC6Reddit25AnonymousBrowsingExitView, _TtC6Reddit25AuthenticationCoordinator;
 
 @interface TextureMainFeedViewController : FeedViewController <EmptyFeedNuxViewDelegate, _TtP6Reddit33AnonymousBrowsingExitViewDelegate_, MainFeedPresentable>
 {
     EmptyFeedNUXView *_emptyFeedNUXView;
     _TtC6Reddit25AnonymousBrowsingExitView *_anonymousBrowsingEmptyView;
+    _TtC6Reddit25AuthenticationCoordinator *_authenticationCoordinator;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit25AuthenticationCoordinator *authenticationCoordinator; // @synthesize authenticationCoordinator=_authenticationCoordinator;
 @property(retain, nonatomic) _TtC6Reddit25AnonymousBrowsingExitView *anonymousBrowsingEmptyView; // @synthesize anonymousBrowsingEmptyView=_anonymousBrowsingEmptyView;
 @property(retain, nonatomic) EmptyFeedNUXView *emptyFeedNUXView; // @synthesize emptyFeedNUXView=_emptyFeedNUXView;
 - (void)feedSortOptionController:(id)arg1 didFinishSelectingFeedSort:(unsigned long long)arg2 feedRange:(unsigned long long)arg3;

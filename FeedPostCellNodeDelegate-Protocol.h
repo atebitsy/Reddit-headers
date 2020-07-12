@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "FeedPostAwardsNodeDelegate-Protocol.h"
 #import "FeedPostCommentBarNodeDelegate-Protocol.h"
 #import "FeedPostContentNodeDelegate-Protocol.h"
 #import "FeedPostEventBarNodeDelegate-Protocol.h"
 #import "FeedPostModerateBarNodeDelegate-Protocol.h"
 #import "FeedPostTitleNodeDelegate-Protocol.h"
 #import "PostVisibilityDelegate-Protocol.h"
+#import "_TtP7Economy26FeedPostAwardsNodeDelegate_-Protocol.h"
 
-@protocol FeedPostCellNodeDelegate <FeedPostContentNodeDelegate, FeedPostTitleNodeDelegate, FeedPostCommentBarNodeDelegate, FeedPostModerateBarNodeDelegate, FeedPostEventBarNodeDelegate, FeedPostAwardsNodeDelegate, PostVisibilityDelegate>
+@protocol FeedPostCellNodeDelegate <FeedPostContentNodeDelegate, FeedPostTitleNodeDelegate, FeedPostCommentBarNodeDelegate, FeedPostModerateBarNodeDelegate, FeedPostEventBarNodeDelegate, _TtP7Economy26FeedPostAwardsNodeDelegate_, PostVisibilityDelegate>
 @end
 

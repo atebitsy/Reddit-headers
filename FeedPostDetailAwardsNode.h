@@ -8,7 +8,7 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class NSDictionary, NSString, Post, _TtC6Reddit18AddAwardButtonNode;
+@class NSDictionary, NSString, Post, _TtC7Economy18AddAwardButtonNode;
 @protocol FeedPostDetailAwardsNodeDelegate;
 
 @interface FeedPostDetailAwardsNode : BaseFeedDisplayNode <ObjectObserverProtocol>
@@ -19,11 +19,11 @@
     Post *_post;
     NSString *_accountPk;
     NSDictionary *_awardsNodes;
-    _TtC6Reddit18AddAwardButtonNode *_addAwardNode;
+    _TtC7Economy18AddAwardButtonNode *_addAwardNode;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) _TtC6Reddit18AddAwardButtonNode *addAwardNode; // @synthesize addAwardNode=_addAwardNode;
+@property(retain, nonatomic) _TtC7Economy18AddAwardButtonNode *addAwardNode; // @synthesize addAwardNode=_addAwardNode;
 @property(readonly, nonatomic) _Bool awardsPlaqueEnabled; // @synthesize awardsPlaqueEnabled=_awardsPlaqueEnabled;
 @property(nonatomic) _Bool shouldAttemptToAnimateLastGivenAward; // @synthesize shouldAttemptToAnimateLastGivenAward=_shouldAttemptToAnimateLastGivenAward;
 @property(retain, nonatomic) NSDictionary *awardsNodes; // @synthesize awardsNodes=_awardsNodes;

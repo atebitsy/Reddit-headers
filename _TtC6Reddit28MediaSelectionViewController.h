@@ -11,6 +11,7 @@
 
 @interface _TtC6Reddit28MediaSelectionViewController : BaseViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
+    // Error parsing type: , name: analyticsDelegate
     // Error parsing type: , name: delegate
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: assetManager

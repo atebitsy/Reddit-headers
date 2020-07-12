@@ -5,6 +5,7 @@
 //
 
 @protocol _TtP8RedditUI33BottomSheetViewControllerDelegate_
+- (void)onDimmerViewTapped;
 - (void)didDismissSheet;
 - (void)didExpandToFullSheet;
 - (void)onExpandToFullSheet;

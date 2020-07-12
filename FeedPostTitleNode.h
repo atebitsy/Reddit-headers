@@ -10,12 +10,13 @@
 #import "ObjectObserverProtocol-Protocol.h"
 #import "TemplateParserContext-Protocol.h"
 
-@class AFNetworkImageNode, ASDisplayNode, ASTextNode, BaseButtonNode, FeedPostOptions, FeedPostTitleOptions, NSString, Post, PostMetaViewModel, RichTextLoader, UIView, _TtC6Reddit34FeedPostMetaUsernameDecorationNode;
+@class AFNetworkImageNode, ASDisplayNode, ASTextNode, BaseButtonNode, FeedPostCellNode, FeedPostOptions, FeedPostTitleOptions, NSString, Post, PostMetaViewModel, RichTextLoader, UIView, _TtC6Reddit34FeedPostMetaUsernameDecorationNode;
 @protocol FeedPostTitleNodeDelegate, ViewContext;
 
 @interface FeedPostTitleNode : BaseFeedDisplayNode <ASTextNodeDelegate, ObjectObserverProtocol, TemplateParserContext>
 {
     id <FeedPostTitleNodeDelegate> _delegate;
+    FeedPostCellNode *_feedPostCellNode;
     Post *_post;
     id <ViewContext> _viewContext;
     FeedPostOptions *_options;
@@ -47,6 +48,7 @@
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
+@property(nonatomic) __weak FeedPostCellNode *feedPostCellNode; // @synthesize feedPostCellNode=_feedPostCellNode;
 @property(nonatomic) __weak id <FeedPostTitleNodeDelegate> delegate; // @synthesize delegate=_delegate;
 - (_Bool)isSubscribed;
 @property(readonly, nonatomic) _Bool shouldShowSubscribeButton;

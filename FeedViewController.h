@@ -123,7 +123,7 @@
 - (void)didTapDownvoteForPost:(id)arg1;
 - (void)didTapUpvoteForPost:(id)arg1;
 - (void)didTapTitleReportsForPost:(id)arg1;
-- (void)didTapTitleOverflowForPost:(id)arg1 fromView:(id)arg2;
+- (void)didTapTitleOverflowForPost:(id)arg1 fromView:(id)arg2 withVideoTimestamp:(id)arg3;
 - (void)didTapSubscribeButtonForPost:(id)arg1 templateContext:(id)arg2;
 - (void)didTapTitleForPost:(id)arg1 linkURL:(id)arg2 context:(unsigned long long)arg3;
 - (void)didTapBackgroundForPost:(id)arg1;

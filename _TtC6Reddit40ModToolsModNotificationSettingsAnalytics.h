@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit40ModToolsModNotificationSettingsAnalytics : _TtC6Reddit17ModToolsAnalytics
 {
+    // Error parsing type: , name: pageType
 }
 
 @end

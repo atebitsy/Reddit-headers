@@ -6,7 +6,9 @@
 
 #import "_TtC6Reddit24PendingPostTableViewCell.h"
 
-@interface _TtC6Reddit24PendingPostTableViewCell (Reddit)
+#import "ObjectObserverProtocol-Protocol.h"
+
+@interface _TtC6Reddit24PendingPostTableViewCell (Reddit) <ObjectObserverProtocol>
 - (void)updateContentViewsForData:(id)arg1;
 @end
 

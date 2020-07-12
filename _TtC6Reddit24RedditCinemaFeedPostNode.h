@@ -6,7 +6,7 @@
 
 #import "BaseCollectionViewCellNode.h"
 
-@class FeedPostCommentBarNode, FeedPostEventBarNode, FeedPostTextWithThumbnailNode, FeedPostTitleNode, Post, _TtC6Reddit18FeedPostAwardsNode, _TtC6Reddit21RedditCinemaVideoNode;
+@class FeedPostCommentBarNode, FeedPostEventBarNode, FeedPostTextWithThumbnailNode, FeedPostTitleNode, Post, _TtC6Reddit21RedditCinemaVideoNode, _TtC7Economy18FeedPostAwardsNode;
 
 @interface _TtC6Reddit24RedditCinemaFeedPostNode : BaseCollectionViewCellNode
 {
@@ -32,7 +32,7 @@
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
 - (void)dealloc;
 @property(nonatomic) _Bool shouldShowUpNextTitle; // @synthesize shouldShowUpNextTitle;
-@property(nonatomic, retain) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode;
+@property(nonatomic, retain) _TtC7Economy18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode;
 @property(nonatomic, retain) FeedPostCommentBarNode *actionBarNode; // @synthesize actionBarNode;
 @property(nonatomic, retain) _TtC6Reddit21RedditCinemaVideoNode *contentNode; // @synthesize contentNode;
 @property(nonatomic, retain) FeedPostTextWithThumbnailNode *textNode; // @synthesize textNode;

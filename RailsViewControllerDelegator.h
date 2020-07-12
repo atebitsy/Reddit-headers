@@ -49,6 +49,7 @@
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (id)feedNetworkSourceWithSort:(unsigned long long)arg1 range:(unsigned long long)arg2;
 - (id)feedNetworkSourceWithSort:(unsigned long long)arg1;
+- (void)sendScreenViewEventOnFilterChange;
 - (void)filterSearchViewController:(id)arg1 didSelectTimeParameter:(id)arg2 withSortParameter:(id)arg3;
 - (void)subscribableNodeDidSubscribe:(id)arg1;
 - (void)searchHistoryItemNodeDidTapClear:(id)arg1;

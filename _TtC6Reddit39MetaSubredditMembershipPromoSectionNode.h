@@ -6,11 +6,9 @@
 
 #import <AsyncDisplayKit/ASDisplayNode.h>
 
-#import "ASPagerDataSource-Protocol.h"
-
 @protocol _TtP6Reddit47MetaSubredditMembershipPromoSectionNodeDelegate_;
 
-@interface _TtC6Reddit39MetaSubredditMembershipPromoSectionNode : ASDisplayNode <ASPagerDataSource>
+@interface _TtC6Reddit39MetaSubredditMembershipPromoSectionNode : ASDisplayNode
 {
     // Error parsing type: , name: subreddit
     // Error parsing type: , name: nodeBlocks

@@ -28,6 +28,7 @@
 @property(readonly, nonatomic) _Bool isSubredditIdOnCommunityPostConsumeEnabled;
 @property(readonly, nonatomic) _Bool isRPANSubredditIdToSREnabled;
 @property(readonly, nonatomic) _Bool isRPANNewAudioPolicyEnabled;
+- (void)exposeVideoNewVolumePolicy;
 @property(readonly, nonatomic) long long videoPlayerNewVolumePolicyVariant;
 @property(readonly, nonatomic) long long rpanChatV2FullscreenGestureVariant;
 @property(readonly, nonatomic) _Bool isRPANChatV2BroadcasterEnabled;
@@ -89,7 +90,7 @@
 @property(readonly, nonatomic) _Bool isCommunityModInviteEnabled;
 @property(readonly, nonatomic) _Bool isCommunityTabRefactorEnabled;
 @property(readonly, nonatomic) _Bool isLocationRecommendationsToggleEnabled;
-@property(readonly, nonatomic) _Bool isEditUsernameEnabled;
+@property(readonly, nonatomic) _Bool isHideMessageButtonFromUserProfileFeatureEnabled;
 - (_Bool)shouldOverrideSingleSignOnExperiment;
 @property(readonly, nonatomic) _Bool isSingleSignOnSplashExposedEnabled;
 @property(readonly, nonatomic) _Bool isSingleSignOnEnabled;

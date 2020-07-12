@@ -8,6 +8,7 @@
 
 @interface UIImage (Avatar)
 + (id)avatarDefaultImageForBase10ID:(long long)arg1;
++ (id)tintedImageNamed:(id)arg1 bundle:(id)arg2 tintColor:(id)arg3;
 + (id)tintedImageNamed:(id)arg1 tintColor:(id)arg2;
 + (id)circularImageFromImage:(id)arg1 withFillColor:(id)arg2;
 + (id)imageFromColor:(id)arg1 andSize:(struct CGSize)arg2;

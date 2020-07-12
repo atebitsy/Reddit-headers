@@ -30,6 +30,7 @@
 - (id)scrollObservations;
 - (id)scrollProgressObservers;
 - (void)scrollToRefreshControlWithAnimated:(_Bool)arg1 scrollCompletion:(CDUnknownBlockType)arg2;
+- (struct CGPoint)contentOffsetFor:(long long)arg1;
 - (double)scrollDistanceFrom:(long long)arg1;
 @end
 

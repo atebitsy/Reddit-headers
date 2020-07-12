@@ -46,6 +46,7 @@
 @property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 @property(retain, nonatomic) MainTabBarController *tabController; // @synthesize tabController=_tabController;
 @property(nonatomic) __weak id <RootViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)navigateToLoginCaptureView;
 - (id)createAccountContextWithRedditService:(id)arg1;
 - (void)handlePanOnBlockInputView:(id)arg1;
 - (void)handleTapOnBlockInputView:(id)arg1;
@@ -70,6 +71,7 @@
 - (void)showAlertDialogWithTitle:(id)arg1 actionURLString:(id)arg2 force:(_Bool)arg3;
 - (void)unloadChildViewControllers;
 - (void)handleConfigUpdatedWithError:(id)arg1;
+- (void)refreshConfig;
 - (void)reloadAllControllers;
 - (void)showSurvey:(id)arg1;
 - (void)applicationUserDidTakeScreenshot:(id)arg1;

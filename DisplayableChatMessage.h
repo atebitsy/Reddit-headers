@@ -15,19 +15,23 @@
     _Bool _showFooter;
     _Bool _showHeader;
     _Bool _showDateline;
+    _Bool _showGapOnLeft;
+    _Bool _showBubbleBackground;
     _Bool _addExtraPadding;
     ChatMessage *_chatMessage;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool addExtraPadding; // @synthesize addExtraPadding=_addExtraPadding;
-@property(nonatomic) _Bool showDateline; // @synthesize showDateline=_showDateline;
-@property(nonatomic) _Bool showHeader; // @synthesize showHeader=_showHeader;
-@property(nonatomic) _Bool showFooter; // @synthesize showFooter=_showFooter;
+@property(readonly, nonatomic) _Bool addExtraPadding; // @synthesize addExtraPadding=_addExtraPadding;
+@property(readonly, nonatomic) _Bool showBubbleBackground; // @synthesize showBubbleBackground=_showBubbleBackground;
+@property(readonly, nonatomic) _Bool showGapOnLeft; // @synthesize showGapOnLeft=_showGapOnLeft;
+@property(readonly, nonatomic) _Bool showDateline; // @synthesize showDateline=_showDateline;
+@property(readonly, nonatomic) _Bool showHeader; // @synthesize showHeader=_showHeader;
+@property(readonly, nonatomic) _Bool showFooter; // @synthesize showFooter=_showFooter;
 @property(retain, nonatomic) ChatMessage *chatMessage; // @synthesize chatMessage=_chatMessage;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
-- (id)initWithMessage:(id)arg1 showFooter:(_Bool)arg2 showHeader:(_Bool)arg3 showDateline:(_Bool)arg4 addExtraPadding:(_Bool)arg5;
+- (id)initWithMessage:(id)arg1 showFooter:(_Bool)arg2 showHeader:(_Bool)arg3 showDateline:(_Bool)arg4 showGapOnLeft:(_Bool)arg5 showBubbleBackground:(_Bool)arg6 addExtraPadding:(_Bool)arg7;
 
 @end
 

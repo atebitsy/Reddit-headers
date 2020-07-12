@@ -6,11 +6,13 @@
 
 #import <RedditUI/BaseView.h>
 
+@class User;
 @protocol _TtP6Reddit20UserCardViewDelegate_;
 
 @interface _TtC6Reddit17UserHovercardView : BaseView
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: user
     // Error parsing type: , name: variant
     // Error parsing type: , name: actionTableHeightConstraint
     // Error parsing type: , name: viewContext
@@ -24,6 +26,7 @@
     // Error parsing type: , name: bannerImageView
     // Error parsing type: , name: avatarImageView
     // Error parsing type: , name: contentStackView
+    // Error parsing type: , name: innerContentStackView
     // Error parsing type: , name: displayNameChevronStackView
     // Error parsing type: , name: displayNameLabel
     // Error parsing type: , name: chevronImageView
@@ -33,7 +36,7 @@
     // Error parsing type: , name: spacerView
     // Error parsing type: , name: messageStackView
     // Error parsing type: , name: messageTextButton
-    // Error parsing type: , name: sendButton
+    // Error parsing type: , name: quickChatButton
     // Error parsing type: , name: actionsTableView
     // Error parsing type: , name: userActivityIndicator
     // Error parsing type: , name: actionsActivityIndicator
@@ -41,6 +44,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)didTapQuickChat;
 - (void)didTapMessage;
 - (void)didTapAvatarImageView;
 - (void)didTapBannerImageView;
@@ -55,6 +59,7 @@
 - (void)configureWithUser:(id)arg1 subreddit:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithViewContext:(id)arg1;
+@property(nonatomic, retain) User *user; // @synthesize user;
 @property(nonatomic) __weak id <_TtP6Reddit20UserCardViewDelegate_> delegate; // @synthesize delegate;
 
 @end

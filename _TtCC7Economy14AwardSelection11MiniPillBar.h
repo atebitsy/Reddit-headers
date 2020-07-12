@@ -13,6 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: contentScrollView
     // Error parsing type: , name: pillsStackView
     // Error parsing type: , name: action
+    // Error parsing type: , name: emptyStatePlaceholderConstraint
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: selectedMiniPillViewModel
     // Error parsing type: , name: theme

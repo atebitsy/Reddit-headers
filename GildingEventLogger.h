@@ -47,6 +47,7 @@
 - (void)logClickGetPremiumButtonEventWithAward:(id)arg1;
 - (void)logSaveOptionsEvent;
 - (void)logTypeMessageEvent;
+- (void)logClickGetMoreCoinsEvent;
 - (void)logClickEditOptionsEvent;
 - (void)logUnselectAnonymousOptionEvent;
 - (void)logSelectAnonymousOptionEvent;

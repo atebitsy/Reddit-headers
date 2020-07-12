@@ -28,7 +28,7 @@
 - (void)viewDidLoad;
 - (id)initWithReportable:(id)arg1 accountContext:(id)arg2;
 - (id)initWithLiveStream:(id)arg1 relativeReportTime:(double)arg2 accountContext:(id)arg3;
-- (id)initWithLiveStreamPost:(id)arg1 accountContext:(id)arg2;
+- (id)initWithLiveStreamPost:(id)arg1 relativeReportTime:(double)arg2 accountContext:(id)arg3;
 - (id)initWithLiveStreamComment:(id)arg1 accountContext:(id)arg2;
 - (id)initWithChatPostMessage:(id)arg1 accountContext:(id)arg2;
 @property(nonatomic, copy) CDUnknownBlockType onComplaintSiteVisited;

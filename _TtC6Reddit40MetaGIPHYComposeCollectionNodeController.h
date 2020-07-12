@@ -7,9 +7,8 @@
 #import <objc/NSObject.h>
 
 #import "ASCollectionDataSource-Protocol.h"
-#import "ASCollectionDelegate-Protocol.h"
 
-@interface _TtC6Reddit40MetaGIPHYComposeCollectionNodeController : NSObject <ASCollectionDataSource, ASCollectionDelegate>
+@interface _TtC6Reddit40MetaGIPHYComposeCollectionNodeController : NSObject <ASCollectionDataSource>
 {
     // Error parsing type: , name: giphyObjects
     // Error parsing type: , name: context

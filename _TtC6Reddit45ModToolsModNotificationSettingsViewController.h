@@ -6,8 +6,6 @@
 
 #import "BaseViewController.h"
 
-@class NSString;
-
 @interface _TtC6Reddit45ModToolsModNotificationSettingsViewController : BaseViewController
 {
     // Error parsing type: , name: accountContext
@@ -23,15 +21,13 @@
 
 - (void).cxx_destruct;
 - (id)init;
-@property(nonatomic, readonly) NSString *analyticsScreenViewName;
-@property(nonatomic, readonly) NSString *analyticsPageType;
 - (void)backNavigationAction;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)configureViewAppearance;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccountContext:(id)arg1 community:(id)arg2 source:(id)arg3 moderatorUserPermissions:(unsigned long long)arg4;
+- (id)initWithAccountContext:(id)arg1 community:(id)arg2 pageType:(id)arg3 moderatorUserPermissions:(unsigned long long)arg4;
 
 @end
 

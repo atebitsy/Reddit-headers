@@ -10,7 +10,7 @@
 #import "UITableViewDelegate-Protocol.h"
 #import "_TtP6Reddit12UserCardView_-Protocol.h"
 
-@class BaseButton, BaseImageView, BaseLabel, BaseTableView, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, UIActivityIndicatorView;
+@class BaseButton, BaseImageView, BaseLabel, BaseTableView, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, UIActivityIndicatorView, User;
 @protocol ViewContext, _TtP6Reddit20UserCardViewDelegate_;
 
 @interface UserCardModal : BaseView <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit12UserCardView_>
@@ -32,9 +32,11 @@
     UIActivityIndicatorView *_userActivityIndicator;
     UIActivityIndicatorView *_actionsActivityIndicator;
     NSLayoutConstraint *_actionTableHeightConstraint;
+    User *_user;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(retain, nonatomic) NSLayoutConstraint *actionTableHeightConstraint; // @synthesize actionTableHeightConstraint=_actionTableHeightConstraint;
 @property(retain, nonatomic) UIActivityIndicatorView *actionsActivityIndicator; // @synthesize actionsActivityIndicator=_actionsActivityIndicator;
 @property(retain, nonatomic) UIActivityIndicatorView *userActivityIndicator; // @synthesize userActivityIndicator=_userActivityIndicator;

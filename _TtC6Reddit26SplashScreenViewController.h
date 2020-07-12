@@ -14,6 +14,7 @@
     // Error parsing type: , name: splashScreenView
     // Error parsing type: , name: splashScreenSingleSignOnView
     // Error parsing type: , name: backgroundAnimationView
+    // Error parsing type: , name: overlayLoadingView
     // Error parsing type: , name: delegate
 }
 
@@ -21,6 +22,7 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)didTapSkipButtonWithSender:(id)arg1;
 - (void)didTapGetStartedWithSender:(id)arg1;
+- (void)didTapLoginPreExposedWithSender:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)viewDidLoad;

@@ -7,6 +7,7 @@
 #import "_TtC6Reddit27SearchAnalyticsEventFactory.h"
 
 @interface _TtC6Reddit27SearchAnalyticsEventFactory (Reddit2)
++ (id)userPreferencesWithIsNSFWHidden:(_Bool)arg1;
 + (id)analyticsSubredditWith:(id)arg1;
 + (id)analyticsPostWith:(id)arg1;
 + (id)searchWith:(id)arg1 flair:(id)arg2 subreddit:(id)arg3;

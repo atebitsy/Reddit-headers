@@ -14,6 +14,7 @@
 @interface _TtC8RedditUI25BottomSheetViewController : UIViewController <_TtP8RedditUI21ActionSheetAnimatable_>
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: shouldDismissOnDimmerViewTap
     // Error parsing type: , name: topAnchorConstraint
     // Error parsing type: , name: child
     // Error parsing type: , name: isFullSheet
@@ -32,6 +33,7 @@
 @property(nonatomic) double contentHeight; // @synthesize contentHeight;
 @property(nonatomic, retain) BaseControl *dimmerView; // @synthesize dimmerView;
 @property(nonatomic, retain) BaseView *contentView; // @synthesize contentView;
+@property(nonatomic) _Bool shouldDismissOnDimmerViewTap; // @synthesize shouldDismissOnDimmerViewTap;
 @property(nonatomic) __weak id <_TtP8RedditUI33BottomSheetViewControllerDelegate_> delegate; // @synthesize delegate;
 
 @end

@@ -23,6 +23,7 @@
 @property(nonatomic) double surveyLastSeenTime;
 - (long long)getCountForSurveyId:(id)arg1;
 - (void)setCount:(long long)arg1 forSurveyId:(id)arg2;
+- (void)resetSurveyCounts;
 - (void)updatePropertiesForStreamingConfig:(id)arg1;
 @property(nonatomic) long long streamingConfigViewerInitialHeartbeatDelaySeconds;
 @property(nonatomic) double streamingConfigViewerHeartbeatInterval;

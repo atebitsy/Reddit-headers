@@ -6,9 +6,13 @@
 
 #import "_TtC6Reddit30BottomSheetLoginViewController.h"
 
-@interface _TtC6Reddit30BottomSheetLoginViewController (Reddit1)
-- (void)didTapDismissButtonWithRegistrationViewController:(id)arg1;
-- (void)didAuthenticateServiceWithRegistrationViewController:(id)arg1 service:(id)arg2 isNewUser:(_Bool)arg3;
-- (void)didTapLoginButtonWithRegistrationViewController:(id)arg1;
+#import "_TtP8RedditUI33BottomSheetViewControllerDelegate_-Protocol.h"
+
+@interface _TtC6Reddit30BottomSheetLoginViewController (Reddit1) <_TtP8RedditUI33BottomSheetViewControllerDelegate_>
+- (void)onDimmerViewTapped;
+- (void)didDismissSheet;
+- (void)didExpandToFullSheet;
+- (void)onExpandToFullSheet;
+- (void)willExpandToFullSheet;
 @end
 

@@ -6,9 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "_TtP8RedditUI33BottomSheetViewControllerDelegate_-Protocol.h"
-
-@interface _TtC6Reddit39LiveStreamSubredditPickerViewController : UIViewController <_TtP8RedditUI33BottomSheetViewControllerDelegate_>
+@interface _TtC6Reddit39LiveStreamSubredditPickerViewController : UIViewController
 {
     // Error parsing type: , name: constants
     // Error parsing type: , name: tableView
@@ -26,6 +24,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)onDimmerViewTapped;
 - (void)didDismissSheet;
 - (void)didExpandToFullSheet;
 - (void)onExpandToFullSheet;

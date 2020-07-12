@@ -9,23 +9,26 @@
 #import <RedditCore/NSURLRequestProcessor-Protocol.h>
 #import <RedditCore/NSURLResponseProcessor-Protocol.h>
 
-@class NSDate, NSString, NSUserDefaults;
+@class NSDate, NSString;
+@protocol UserDefaultsProtocol;
 
 @interface SessionTracker : NSObject <NSURLRequestProcessor, NSURLResponseProcessor>
 {
-    NSUserDefaults *_userDefaults;
+    NSString *_pk;
+    id <UserDefaultsProtocol> _userDefaults;
 }
 
-+ (id)sharedTracker;
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
+@property(readonly, nonatomic) id <UserDefaultsProtocol> userDefaults; // @synthesize userDefaults=_userDefaults;
+@property(readonly, nonatomic) NSString *pk; // @synthesize pk=_pk;
 - (void)processResponse:(id)arg1;
 - (void)processRequest:(id)arg1;
 @property(readonly, nonatomic) _Bool isValid;
 @property(readonly, nonatomic) NSDate *date;
 @property(readonly, nonatomic) NSString *sessionId;
 @property(copy, nonatomic) NSString *fullString;
-- (id)initWithUserDefaults:(id)arg1;
+@property(readonly, nonatomic) NSString *userDefaultsKey;
+- (id)initWithAccountPk:(id)arg1 userDefaults:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

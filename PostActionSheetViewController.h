@@ -9,13 +9,14 @@
 #import "MFMailComposeViewControllerDelegate-Protocol.h"
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
-@class NSString, Post, PostActionSheetConfiguration;
+@class NSNumber, NSString, Post, PostActionSheetConfiguration;
 @protocol AccountContext, PostActionSheetDelegate;
 
 @interface PostActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate, MFMailComposeViewControllerDelegate>
 {
     Post *_post;
     PostActionSheetConfiguration *_configuration;
+    NSNumber *_videoTimestamp;
     NSString *_correlationId;
     id <PostActionSheetDelegate> _postActionSheetDelegate;
     id <AccountContext> _accountContext;
@@ -25,6 +26,7 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostActionSheetDelegate> postActionSheetDelegate; // @synthesize postActionSheetDelegate=_postActionSheetDelegate;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
+@property(retain, nonatomic) NSNumber *videoTimestamp; // @synthesize videoTimestamp=_videoTimestamp;
 @property(retain, nonatomic) PostActionSheetConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void)logAnalyticsForRUIActionSheetItemSelection:(id)arg1 post:(id)arg2;

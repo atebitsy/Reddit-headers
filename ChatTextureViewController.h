@@ -99,9 +99,10 @@
 - (void)updateSubtitleLabel;
 - (void)updateTitleLabel;
 - (void)configureTitleView;
-- (void)configureWithContacts:(id)arg1;
+- (void)configureWithContacts:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (void)configureWithUrl:(id)arg1;
 - (void)configureWithUser:(id)arg1;
+- (void)configureWithUser:(id)arg1 messageTextToSend:(id)arg2;
 - (void)configureWithChannel:(id)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)updateInsetsAndShouldChangeOffset:(_Bool)arg1;

@@ -118,6 +118,7 @@
 - (void)hideAward:(id)arg1 comment:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)reportAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)reportUsernameToCrisisTextLine:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)reportLiveStreamPost:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 relativeReportTime:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)reportLiveStream:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 relativeReportTime:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)reportMessage:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)reportComment:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 completion:(CDUnknownBlockType)arg4;
@@ -277,7 +278,7 @@
 - (void)validatePurchaseWithMetadata:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)submitExposureEvents:(id)arg1 targetingInfo:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchExperimentVariantsWithTargetingInfo:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)fetchTopAwardedPostDataWithCompletion:(CDUnknownBlockType)arg1;
+- (void)fetchTopAwardedPostsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchSortedUsableAwardTotalsForSubreddit:(id)arg1 post:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateAccountCoinsWithAmount:(id)arg1;
 - (id)errorForStatus:(id)arg1;
@@ -290,6 +291,7 @@
 - (void)submitPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)parseGraphQLPostData:(id)arg1 parseSubreddits:(_Bool)arg2 parseCrosspostSubreddits:(_Bool)arg3;
 - (CDUnknownBlockType)parsePostWithSubredditBlock;
+- (id)moderatedSubredditsListingForUserId:(id)arg1 first:(long long)arg2;
 - (id)geoContributableSubredditsListing;
 - (id)globalCommunityTagsListing:(_Bool)arg1;
 - (id)blockedUserIdsListing;

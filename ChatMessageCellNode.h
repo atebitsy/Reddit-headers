@@ -14,7 +14,6 @@
 
 @interface ChatMessageCellNode : ASCellNode <AvatarImageNodeDelegate, ChatMessageContentNodeDelegate>
 {
-    _Bool _showMessageOnly;
     id <ChatMessageCellDelegate> _delegate;
     DisplayableChatMessage *_message;
     id <FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate> _delegateVC;
@@ -36,7 +35,6 @@
 @property(retain, nonatomic) AvatarImageNode *avatarNode; // @synthesize avatarNode=_avatarNode;
 @property(retain, nonatomic) ASTextNode *headerTextNode; // @synthesize headerTextNode=_headerTextNode;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate> delegateVC; // @synthesize delegateVC=_delegateVC;
-@property(nonatomic) _Bool showMessageOnly; // @synthesize showMessageOnly=_showMessageOnly;
 @property(retain, nonatomic) DisplayableChatMessage *message; // @synthesize message=_message;
 @property(nonatomic) __weak id <ChatMessageCellDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)didLongPress:(id)arg1;

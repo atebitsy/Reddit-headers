@@ -20,6 +20,7 @@
     _Bool _isVisibleActiveInCommunity;
     _Bool _isEmployeeUser;
     _Bool _willAcceptChats;
+    _Bool _willAcceptPrivateMessages;
     NSString *_pk;
     NSString *_username;
     NSDate *_createdAt;
@@ -35,6 +36,7 @@
 + (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
 @property(nonatomic) long long totalKarma; // @synthesize totalKarma=_totalKarma;
+@property(nonatomic) _Bool willAcceptPrivateMessages; // @synthesize willAcceptPrivateMessages=_willAcceptPrivateMessages;
 @property(nonatomic) _Bool willAcceptChats; // @synthesize willAcceptChats=_willAcceptChats;
 @property(nonatomic) _Bool isEmployeeUser; // @synthesize isEmployeeUser=_isEmployeeUser;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;

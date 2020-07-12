@@ -54,7 +54,7 @@
 - (id)commentContext;
 - (id)postContext;
 - (id)screenViewAnalyticsEvent;
-- (void)trackInitiatingChatEvent;
+- (void)trackInitiatingChatEventWithReason:(id)arg1;
 @property(readonly, nonatomic) NSString *analyticsScreenViewName;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 - (id)getAuthorFlair;
@@ -64,6 +64,8 @@
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
 - (_Bool)isUserMe:(id)arg1;
 - (void)userCardViewDidRequestInvite:(id)arg1;
+- (_Bool)checkForAnonymousAndLoggedOutUsers;
+- (void)userCardViewDidQuickChat:(id)arg1;
 - (void)userCardViewDidRequestStartChat:(id)arg1;
 - (void)userCardViewDidRequestViewProfile:(id)arg1;
 - (void)userCardViewDidRequestChangeFlair:(id)arg1;

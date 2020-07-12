@@ -8,21 +8,20 @@
 
 #import "RootViewControllerDelegate-Protocol.h"
 
-@class Account, MainTabBarController, NSString, NSURL, RedditService, RootViewController;
-@protocol AccountContext;
+@class AccountManager, MainTabBarController, NSString, NSURL, RootViewController;
 
 @interface AppFlowCoordinator : NSObject <RootViewControllerDelegate>
 {
     _Bool _didScheduleBranchURL;
     _Bool _isBranchMatchGuaranteed;
-    id <AccountContext> _accountContext;
+    AccountManager *_accountManager;
     RootViewController *_rootViewController;
-    MainTabBarController *_mainTabController;
     NSURL *_scheduledURL;
     NSURL *_pendingEmailVerificationURL;
     NSURL *_pushNotifURLToHandleAfterAccountSwitching;
 }
 
++ (void)setupWithAccountManager:(id)arg1 rootViewController:(id)arg2;
 + (id)instance;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *pushNotifURLToHandleAfterAccountSwitching; // @synthesize pushNotifURLToHandleAfterAccountSwitching=_pushNotifURLToHandleAfterAccountSwitching;
@@ -30,31 +29,25 @@
 @property(nonatomic) _Bool didScheduleBranchURL; // @synthesize didScheduleBranchURL=_didScheduleBranchURL;
 @property(copy, nonatomic) NSURL *pendingEmailVerificationURL; // @synthesize pendingEmailVerificationURL=_pendingEmailVerificationURL;
 @property(copy, nonatomic) NSURL *scheduledURL; // @synthesize scheduledURL=_scheduledURL;
-@property(retain, nonatomic) MainTabBarController *mainTabController; // @synthesize mainTabController=_mainTabController;
 @property(readonly, nonatomic) RootViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
-@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void)navigateToLoginCaptureView;
-- (void)handleEmailVerificationURL:(id)arg1;
+@property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
+- (void)handleEmailVerificationURL:(id)arg1 service:(id)arg2;
 - (void)didChangeUser:(id)arg1;
 - (void)applicationDidBecomeActive:(id)arg1;
-- (void)configureWithAccountContext:(id)arg1;
-- (unsigned long long)pushNotificationPromptStyle;
-- (void)showPushNotificationPromptIfNeededWithCompletion:(CDUnknownBlockType)arg1;
+- (unsigned long long)pushNotificationPromptStyleWithService:(id)arg1;
+- (void)showPushNotificationPromptIfNeededWithService:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)rootViewControllerDidInstallNewMainTabBar;
-- (void)refreshConfig;
+- (void)refreshConfigWithService:(id)arg1;
 - (void)handlePushNotificationTappedNotification:(id)arg1;
-- (id)extractDeeplinkURLFromPushNotification:(id)arg1;
+- (id)extractDeeplinkURLFromPushNotification:(id)arg1 account:(id)arg2;
 - (void)cacheURLFromAppLaunchOptions:(id)arg1;
 - (void)navigateToURLIfPossible:(id)arg1;
 - (void)navigateToCachedURLIfPossible;
 - (_Bool)canProcessBranchURLWithMatchGuaranteed:(_Bool)arg1;
 - (void)scheduleNavigatingToURL:(id)arg1;
 - (void)scheduleNavigatingToBranchURL:(id)arg1 isMatchGuaranteed:(_Bool)arg2;
-- (id)init;
-- (void)dealloc;
-@property(readonly, nonatomic) RedditService *currentService;
-@property(readonly, nonatomic) Account *currentAccount;
-- (void)configureWithRootViewController:(id)arg1;
+@property(readonly, nonatomic) MainTabBarController *mainTabController;
+- (id)initWithAccountManager:(id)arg1 rootViewController:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

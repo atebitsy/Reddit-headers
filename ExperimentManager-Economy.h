@@ -21,6 +21,7 @@
 @property(nonatomic, readonly) _Bool isEconAwardsPlaqueEnabled;
 @property(nonatomic, readonly) _Bool isEconStorefrontClaimEnabled;
 @property(nonatomic, readonly) _Bool isEconFeedAwardsV2SheetEnabled;
+@property(nonatomic, readonly) _Bool isEconPredictionsEnabled;
 @property(nonatomic, readonly) _Bool isEconAnimationsControlEnabled;
 @property(nonatomic, readonly) _Bool isEconCommentHighlightingAnimationEnabled;
 @property(nonatomic, readonly) _Bool isAwardLeaderBoardsEnabled;

@@ -7,13 +7,13 @@
 #import <RedditUI/BaseView.h>
 
 #import "ContentImageViewDelegate-Protocol.h"
-#import "FeedPostAwardsNodeDelegate-Protocol.h"
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
+#import "_TtP7Economy26FeedPostAwardsNodeDelegate_-Protocol.h"
 
-@class BaseLabel, BaseTextView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostThumbnailView, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView, _TtC6Reddit18FeedPostAwardsNode;
-@protocol FeedPostCrosspostViewDelegate, FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate, ViewContext;
+@class BaseLabel, BaseTextView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostThumbnailView, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView, _TtC7Economy18FeedPostAwardsNode;
+@protocol FeedPostCrosspostViewDelegate, FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><_TtP7Economy26FeedPostAwardsNodeDelegate_, ViewContext;
 
-@interface FeedPostCrosspostView : BaseView <RUIThemeUpdateCallbackProtocol, ContentImageViewDelegate, FeedPostAwardsNodeDelegate>
+@interface FeedPostCrosspostView : BaseView <RUIThemeUpdateCallbackProtocol, ContentImageViewDelegate, _TtP7Economy26FeedPostAwardsNodeDelegate_>
 {
     id <FeedPostCrosspostViewDelegate> _delegate;
     Post *_parentPost;
@@ -21,7 +21,7 @@
     FeedPostOptions *_options;
     BaseTextView *_headerTextView;
     IntrinsicSizeNodeWrapper *_awardsWrapper;
-    _TtC6Reddit18FeedPostAwardsNode *_awardsNode;
+    _TtC7Economy18FeedPostAwardsNode *_awardsNode;
     UITextView *_textView;
     FeedPostThumbnailView *_thumbnailImageView;
     FeedPostImageView *_imageView;
@@ -29,7 +29,7 @@
     FeedPostHlsVideoView *_feedPostHlsVideoView;
     FeedPostYouTubeEmbeddedView *_youTubeEmbeddedView;
     BaseLabel *_metadataLabel;
-    id <FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate> _crosspostContentViewsDelegate;
+    id <FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><_TtP7Economy26FeedPostAwardsNodeDelegate_> _crosspostContentViewsDelegate;
     id <ViewContext> _viewContext;
 }
 
@@ -38,7 +38,7 @@
 + (_Bool)shouldForceCompactViewForCrosspost:(id)arg1 withOptions:(id)arg2;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
-@property(nonatomic) __weak id <FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate> crosspostContentViewsDelegate; // @synthesize crosspostContentViewsDelegate=_crosspostContentViewsDelegate;
+@property(nonatomic) __weak id <FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><_TtP7Economy26FeedPostAwardsNodeDelegate_> crosspostContentViewsDelegate; // @synthesize crosspostContentViewsDelegate=_crosspostContentViewsDelegate;
 @property(retain, nonatomic) BaseLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) FeedPostYouTubeEmbeddedView *youTubeEmbeddedView; // @synthesize youTubeEmbeddedView=_youTubeEmbeddedView;
 @property(retain, nonatomic) FeedPostHlsVideoView *feedPostHlsVideoView; // @synthesize feedPostHlsVideoView=_feedPostHlsVideoView;
@@ -46,7 +46,7 @@
 @property(retain, nonatomic) FeedPostImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) FeedPostThumbnailView *thumbnailImageView; // @synthesize thumbnailImageView=_thumbnailImageView;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
-@property(retain, nonatomic) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
+@property(retain, nonatomic) _TtC7Economy18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) IntrinsicSizeNodeWrapper *awardsWrapper; // @synthesize awardsWrapper=_awardsWrapper;
 @property(retain, nonatomic) BaseTextView *headerTextView; // @synthesize headerTextView=_headerTextView;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;

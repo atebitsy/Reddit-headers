@@ -7,6 +7,7 @@
 @class Subreddit, User;
 
 @protocol _TtP6Reddit12UserCardView_
+@property(nonatomic, readonly) User *user;
 - (void)configureWithUser:(User *)arg1 subreddit:(Subreddit *)arg2;
 - (void)showChatActions;
 - (void)showInviteAction;

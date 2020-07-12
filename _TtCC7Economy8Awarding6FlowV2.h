@@ -24,6 +24,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
+- (void)onDimmerViewTapped;
 - (void)didDismissSheet;
 - (void)didExpandToFullSheet;
 - (void)onExpandToFullSheet;

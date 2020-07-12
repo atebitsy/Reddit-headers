@@ -26,6 +26,7 @@
 + (id)imageWithData:(id)arg1 scale:(double)arg2;
 + (id)imageWithData:(id)arg1;
 + (id)imageWithContentsOfFile:(id)arg1;
++ (id)imageNamed:(id)arg1 inBundle:(id)arg2;
 + (id)imageNamed:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool preloadAllAnimatedImageFrames; // @synthesize preloadAllAnimatedImageFrames=_preloadAllAnimatedImageFrames;

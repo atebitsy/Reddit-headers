@@ -11,20 +11,20 @@
 #import "ObjectObserverProtocol-Protocol.h"
 #import "VisibilityTrackable-Protocol.h"
 
-@class ASDisplayNode, Carousel, CarouselContainerNode, FeedPostCommentBarNode, FeedPostContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostMetaViewModel, UIImage, _TtC6Reddit18FeedPostAwardsNode;
+@class ASDisplayNode, Carousel, CarouselContainerNode, FeedPostCommentBarNode, FeedPostContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostMetaViewModel, UIImage, _TtC7Economy18FeedPostAwardsNode;
 @protocol CarouselContainerNodeDelegate, FeedPostCellNodeDelegate><PillContainerNodeDelegate, ViewContext;
 
 @interface FeedPostCellNode : BaseCollectionViewCellNode <VisibilityTrackable, ObjectObserverProtocol, ChainedCarouselDisplaying, FeedPostCollectionViewItem>
 {
     Carousel *_chainedCarousel;
     Post *_post;
+    FeedPostContentNode *_contentNode;
     FeedPostTitleNode *_titleNode;
     id <FeedPostCellNodeDelegate><PillContainerNodeDelegate> _delegate;
     id <CarouselContainerNodeDelegate> _carouselContainerNodeDelegate;
     id <ViewContext> _viewContext;
     FeedPostEventBarNode *_eventBarNode;
-    _TtC6Reddit18FeedPostAwardsNode *_awardsNode;
-    FeedPostContentNode *_contentNode;
+    _TtC7Economy18FeedPostAwardsNode *_awardsNode;
     FeedPostCommentBarNode *_commentBarNode;
     FeedPostModerateBarNode *_modBarNode;
     FeedPostOptions *_options;
@@ -42,13 +42,13 @@
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) FeedPostModerateBarNode *modBarNode; // @synthesize modBarNode=_modBarNode;
 @property(retain, nonatomic) FeedPostCommentBarNode *commentBarNode; // @synthesize commentBarNode=_commentBarNode;
-@property(retain, nonatomic) FeedPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
-@property(retain, nonatomic) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
+@property(retain, nonatomic) _TtC7Economy18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) FeedPostEventBarNode *eventBarNode; // @synthesize eventBarNode=_eventBarNode;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CarouselContainerNodeDelegate> carouselContainerNodeDelegate; // @synthesize carouselContainerNodeDelegate=_carouselContainerNodeDelegate;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate><PillContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) FeedPostTitleNode *titleNode; // @synthesize titleNode=_titleNode;
+@property(retain, nonatomic) FeedPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) Carousel *chainedCarousel; // @synthesize chainedCarousel=_chainedCarousel;
 - (id)voteTooltipAnchorView;

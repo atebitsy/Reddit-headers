@@ -15,6 +15,7 @@
     // Error parsing type: , name: miniPillBar
     // Error parsing type: , name: awardList
     // Error parsing type: , name: awardInfoView
+    // Error parsing type: , name: failureView
     // Error parsing type: , name: awardListTopSeparatorView
     // Error parsing type: , name: awardListBottomSeparatorView
     // Error parsing type: , name: swipeInfo

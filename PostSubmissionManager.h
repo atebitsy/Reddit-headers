@@ -19,6 +19,7 @@
     NSMutableDictionary *_submissionContexts;
 }
 
++ (id)imageFilePathForFileName:(id)arg1;
 + (id)imageFilePathForSubmittedPost:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *submissionContexts; // @synthesize submissionContexts=_submissionContexts;
@@ -41,6 +42,7 @@
 - (void)submitPost:(id)arg1;
 - (void)prepareVideoPost:(id)arg1;
 - (id)getVideoThumbnail:(id)arg1;
+- (id)writeImage:(id)arg1 toFilePath:(id)arg2;
 - (void)preparePost:(id)arg1;
 - (void)initializeTranscodingSockets;
 @property(readonly, copy, nonatomic) NSArray *succeededImageUploads;

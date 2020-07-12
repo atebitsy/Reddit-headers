@@ -6,10 +6,11 @@
 
 #import <UIKit/UINavigationController.h>
 
-@protocol _TtP6Reddit42MediaSelectionNavigationControllerDelegate_;
+@protocol _TtP6Reddit42MediaSelectionNavigationControllerDelegate_, _TtP6Reddit51MediaSelectionNavigationControllerAnalyticsDelegate_;
 
 @interface _TtC6Reddit34MediaSelectionNavigationController : UINavigationController
 {
+    // Error parsing type: , name: analyticsDelegate
     // Error parsing type: , name: mediaSelectionDelegate
     // Error parsing type: , name: configuration
     // Error parsing type: , name: selectionViewController
@@ -23,6 +24,7 @@
 - (id)initWithCoder:(id)arg1;
 - (id)init;
 @property(nonatomic) __weak id <_TtP6Reddit42MediaSelectionNavigationControllerDelegate_> mediaSelectionDelegate; // @synthesize mediaSelectionDelegate;
+@property(nonatomic) __weak id <_TtP6Reddit51MediaSelectionNavigationControllerAnalyticsDelegate_> analyticsDelegate; // @synthesize analyticsDelegate;
 
 @end
 

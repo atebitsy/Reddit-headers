@@ -9,6 +9,7 @@
 @interface _TtC6Reddit13SurveyManager : NSObject
 {
     // Error parsing type: , name: surveys
+    // Error parsing type: , name: surveyCooldownDays
     // Error parsing type: , name: service
     // Error parsing type: , name: appSettings
 }
@@ -16,7 +17,8 @@
 + (id)kSurveyModelKey;
 - (void).cxx_destruct;
 - (id)init;
-- (_Bool)triggerSurveyEvent:(long long)arg1;
+- (void)reset;
+- (void)triggerSurveyEvent:(long long)arg1;
 - (id)initWithService:(id)arg1 appSettings:(id)arg2;
 
 @end

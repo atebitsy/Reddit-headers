@@ -7,14 +7,17 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSData, NSDate, NSDictionary, NSOrderedSet, NSSet, NSString, SearchHistory;
+@protocol UserDefaultsProtocol;
 
 @interface AccountSettings : NSObject
 {
     NSString *_accountPk;
+    id <UserDefaultsProtocol> _userDefaults;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
+@property(readonly, nonatomic) id <UserDefaultsProtocol> userDefaults; // @synthesize userDefaults=_userDefaults;
+@property(readonly, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
 - (_Bool)shouldHideTaggableWithPk:(id)arg1;
 - (void)setShouldHide:(_Bool)arg1 forTaggableWithPk:(id)arg2;
 @property(copy, nonatomic) NSDictionary *shareActivityHistory;
@@ -71,7 +74,7 @@
 - (void)updateValue:(id)arg1 forKey:(id)arg2;
 @property(retain, nonatomic) NSDictionary *dictionary;
 - (id)keyForCurrentAccount;
-- (id)initWithAccountPk:(id)arg1;
+- (id)initWithAccountPk:(id)arg1 userDefaults:(id)arg2;
 - (_Bool)hasUserAcceptedNSFWFor:(id)arg1;
 - (void)persistNSFWAcceptedFor:(id)arg1;
 

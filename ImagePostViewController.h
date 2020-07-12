@@ -12,10 +12,11 @@
 #import "UIImagePickerControllerDelegate-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
 #import "_TtP6Reddit42MediaSelectionNavigationControllerDelegate_-Protocol.h"
+#import "_TtP6Reddit51MediaSelectionNavigationControllerAnalyticsDelegate_-Protocol.h"
 
 @class AVURLAsset, BaseButton, BaseView, BottomLabelButton, HlsPlayerView, NSDictionary, NSFileManager, NSString, NSURL, NSUUID, UIImage, UIImagePickerController, UIImageView, UITapGestureRecognizer, UIView, _TtC6Reddit15RedditVideoNode;
 
-@interface ImagePostViewController : PostViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AttributedLabelRegularDelegate, ImagePostViewControllerDelegate, PlayerViewDelegate, _TtP6Reddit42MediaSelectionNavigationControllerDelegate_>
+@interface ImagePostViewController : PostViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AttributedLabelRegularDelegate, ImagePostViewControllerDelegate, PlayerViewDelegate, _TtP6Reddit51MediaSelectionNavigationControllerAnalyticsDelegate_, _TtP6Reddit42MediaSelectionNavigationControllerDelegate_>
 {
     _Bool _wasTrimmed;
     _Bool _isGif;
@@ -73,6 +74,8 @@
 @property(retain, nonatomic) NSURL *videoURL; // @synthesize videoURL=_videoURL;
 @property(retain, nonatomic) UIImage *currentImage; // @synthesize currentImage=_currentImage;
 - (void)mediaSelectionNavigationController:(id)arg1 didSelect:(id)arg2;
+- (void)mediaSelectionNavigationControllerDidTapPhotoCell:(id)arg1;
+- (void)mediaSelectionNavigationControllerDidTapCameraCell:(id)arg1;
 - (_Bool)shouldForceAutoplay;
 - (_Bool)shouldDisableAutoplay;
 - (void)playerViewDidEndPlaying:(id)arg1;

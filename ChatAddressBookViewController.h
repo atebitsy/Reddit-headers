@@ -21,6 +21,7 @@
 {
     _Bool _allowSelection;
     _Bool _invalidSearch;
+    _Bool _unableToMessage;
     _Bool _isCreatingGroupChat;
     unsigned long long _mode;
     id <ChatAddressBookViewControllerDelegate> _delegate;
@@ -60,6 +61,7 @@
 @property(retain, nonatomic) REDTokenField *searchField; // @synthesize searchField=_searchField;
 @property(copy, nonatomic) NSString *filterText; // @synthesize filterText=_filterText;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
+@property(nonatomic) _Bool unableToMessage; // @synthesize unableToMessage=_unableToMessage;
 @property(nonatomic) _Bool invalidSearch; // @synthesize invalidSearch=_invalidSearch;
 @property(copy, nonatomic) NSString *searchText; // @synthesize searchText=_searchText;
 @property(retain, nonatomic) NSMutableOrderedSet *pickedContacts; // @synthesize pickedContacts=_pickedContacts;
@@ -93,6 +95,7 @@
 - (void)didTapClose:(id)arg1;
 - (void)setContactSelected:(_Bool)arg1 contact:(id)arg2;
 - (void)toggleContact:(id)arg1;
+- (void)messageUserFailed;
 - (void)userVerificationFailed;
 - (void)userVerificationSucceededWithUser:(id)arg1;
 - (void)addUserFromSearch;

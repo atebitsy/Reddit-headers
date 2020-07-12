@@ -38,6 +38,8 @@
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)mediaSelectionNavigationController:(id)arg1 didSelect:(id)arg2;
+- (void)mediaSelectionNavigationControllerDidTapPhotoCell:(id)arg1;
+- (void)mediaSelectionNavigationControllerDidTapCameraCell:(id)arg1;
 - (void)viewDidLoad;
 @property(nonatomic) struct CGSize preferredContentSize;
 @property(nonatomic, readonly) unsigned long long supportedInterfaceOrientations;

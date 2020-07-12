@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, AccountManager, AdEventsManager, AnalyticsManager, AppSettings, ConfigManager, ExperimentManager, GivenAwardsManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit24RedditMuxAnalyticsLogger, _TtC6Reddit25StreamingHeartbeatService;
+@class Account, AccountManager, AdEventsManager, AnalyticsManager, AppSettings, ConfigManager, ExperimentManager, GivenAwardsManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit12VideoService, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit24RedditMuxAnalyticsLogger;
 @protocol ViewContext;
 
 @interface _TtC6Reddit20RedditAccountContext : NSObject
@@ -16,7 +16,7 @@
     // Error parsing type: , name: rui
     // Error parsing type: , name: visibilityTracker
     // Error parsing type: , name: identityProviderService
-    // Error parsing type: , name: streamingHeartbeatService
+    // Error parsing type: , name: videoService
     // Error parsing type: , name: anonymousModeManager
     // Error parsing type: , name: redditMuxAnalyticsLogger
     // Error parsing type: , name: appSettings
@@ -32,11 +32,11 @@
 @property(nonatomic, readonly) AnalyticsManager *analyticsManager;
 @property(nonatomic, readonly) Account *account;
 @property(nonatomic, readonly) id <ViewContext> viewContext;
-- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 visibilityTracker:(id)arg4 identityProviderService:(id)arg5 streamingHeartbeatService:(id)arg6 anonymousModeManager:(id)arg7 redditMuxAnalyticsLogger:(id)arg8 appSettings:(id)arg9;
+- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 visibilityTracker:(id)arg4 identityProviderService:(id)arg5 videoService:(id)arg6 anonymousModeManager:(id)arg7 redditMuxAnalyticsLogger:(id)arg8 appSettings:(id)arg9;
 @property(nonatomic, readonly) AppSettings *appSettings; // @synthesize appSettings;
 @property(nonatomic, readonly) _TtC6Reddit24RedditMuxAnalyticsLogger *redditMuxAnalyticsLogger; // @synthesize redditMuxAnalyticsLogger;
 @property(nonatomic, readonly) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager;
-@property(nonatomic, readonly) _TtC6Reddit25StreamingHeartbeatService *streamingHeartbeatService; // @synthesize streamingHeartbeatService;
+@property(nonatomic, readonly) _TtC6Reddit12VideoService *videoService; // @synthesize videoService;
 @property(nonatomic, readonly) _TtC6Reddit23IdentityProviderService *identityProviderService; // @synthesize identityProviderService;
 @property(nonatomic, readonly) VisibilityTracker *visibilityTracker; // @synthesize visibilityTracker;
 @property(nonatomic, readonly) RUI *rui; // @synthesize rui;
