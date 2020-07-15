@@ -7,11 +7,12 @@
 #import <Economy/NSObject-Protocol.h>
 
 @class AccountManager, RedditService;
-@protocol _TtP7Economy12EconSettings_, _TtP7Economy22EconomyAnalyticsLogger_;
+@protocol _TtP7Economy11EconConfigs_, _TtP7Economy12EconSettings_, _TtP7Economy22EconomyAnalyticsLogger_;
 
 @protocol _TtP7Economy25EconomyDependencyProvider_ <NSObject>
 - (_Bool)isInAnonymousBrowsingWithRedditService:(RedditService *)arg1;
 - (id <_TtP7Economy22EconomyAnalyticsLogger_>)economyAnalyticsLoggerWithRedditService:(RedditService *)arg1;
+- (id <_TtP7Economy11EconConfigs_>)econConfigsWithRedditService:(RedditService *)arg1;
 @property(nonatomic, readonly) id <_TtP7Economy12EconSettings_> econSettings;
 @property(nonatomic, readonly) AccountManager *accountManager;
 @end

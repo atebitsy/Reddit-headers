@@ -68,6 +68,7 @@
 - (void)searchViewController:(id)arg1 searchWithQuery:(id)arg2 withSearchRequestInterface:(unsigned long long)arg3;
 - (_Bool)shouldShowEmptyWelcomeView;
 - (void)updateContentViewsWhenLoadingMoreFinishes;
+- (void)updateContentViewsForData:(id)arg1;
 - (void)updateFeedDisplayModeFrom:(unsigned long long)arg1 toMode:(unsigned long long)arg2;
 - (void)reloadListData;
 - (void)updateDiffInfo;

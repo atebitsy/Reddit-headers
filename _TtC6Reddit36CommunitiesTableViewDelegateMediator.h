@@ -6,8 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray;
-@protocol UITableViewDelegate;
+@class NSArray, _TtC6Reddit23WeakUITableViewDelegate;
 
 @interface _TtC6Reddit36CommunitiesTableViewDelegateMediator : NSObject
 {
@@ -30,7 +29,7 @@
 - (_Bool)respondsToSelector:(SEL)arg1;
 - (id)initWithPrimaryDelegate:(id)arg1 sectionDelegates:(id)arg2;
 @property(nonatomic, readonly) NSArray *sectionDelegates;
-@property(nonatomic, readonly) id <UITableViewDelegate> primaryDelegate; // @synthesize primaryDelegate;
+@property(nonatomic, readonly) _TtC6Reddit23WeakUITableViewDelegate *primaryDelegate; // @synthesize primaryDelegate;
 @property(nonatomic, readonly) NSArray *allDelegates;
 
 @end

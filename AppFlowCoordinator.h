@@ -12,8 +12,6 @@
 
 @interface AppFlowCoordinator : NSObject <RootViewControllerDelegate>
 {
-    _Bool _didScheduleBranchURL;
-    _Bool _isBranchMatchGuaranteed;
     AccountManager *_accountManager;
     RootViewController *_rootViewController;
     NSURL *_scheduledURL;
@@ -25,25 +23,22 @@
 + (id)instance;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *pushNotifURLToHandleAfterAccountSwitching; // @synthesize pushNotifURLToHandleAfterAccountSwitching=_pushNotifURLToHandleAfterAccountSwitching;
-@property(nonatomic) _Bool isBranchMatchGuaranteed; // @synthesize isBranchMatchGuaranteed=_isBranchMatchGuaranteed;
-@property(nonatomic) _Bool didScheduleBranchURL; // @synthesize didScheduleBranchURL=_didScheduleBranchURL;
 @property(copy, nonatomic) NSURL *pendingEmailVerificationURL; // @synthesize pendingEmailVerificationURL=_pendingEmailVerificationURL;
 @property(copy, nonatomic) NSURL *scheduledURL; // @synthesize scheduledURL=_scheduledURL;
 @property(readonly, nonatomic) RootViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
 @property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 - (void)handleEmailVerificationURL:(id)arg1 service:(id)arg2;
-- (void)didChangeUser:(id)arg1;
-- (void)applicationDidBecomeActive:(id)arg1;
 - (unsigned long long)pushNotificationPromptStyleWithService:(id)arg1;
-- (void)showPushNotificationPromptIfNeededWithService:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)rootViewControllerDidInstallNewMainTabBar;
-- (void)refreshConfigWithService:(id)arg1;
-- (void)handlePushNotificationTappedNotification:(id)arg1;
-- (id)extractDeeplinkURLFromPushNotification:(id)arg1 account:(id)arg2;
-- (void)cacheURLFromAppLaunchOptions:(id)arg1;
 - (void)navigateToURLIfPossible:(id)arg1;
-- (void)navigateToCachedURLIfPossible;
 - (_Bool)canProcessBranchURLWithMatchGuaranteed:(_Bool)arg1;
+- (void)accountDidChange:(id)arg1;
+- (void)pushNotificationWasTapped:(id)arg1;
+- (void)applicationDidBecomeActive:(id)arg1;
+- (void)applicationDidFinishLaunching:(id)arg1;
+- (void)rootViewControllerDidInstallNewMainTabBar;
+- (void)showPushNotificationPromptIfNeededWithService:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)refreshConfigWithService:(id)arg1;
+- (void)navigateToCachedURLIfPossible;
 - (void)scheduleNavigatingToURL:(id)arg1;
 - (void)scheduleNavigatingToBranchURL:(id)arg1 isMatchGuaranteed:(_Bool)arg2;
 @property(readonly, nonatomic) MainTabBarController *mainTabController;

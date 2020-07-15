@@ -8,7 +8,6 @@
 
 #import "PagedTabControllerParentCallback-Protocol.h"
 #import "ParallaxHeaderViewCallback-Protocol.h"
-#import "PreviewModeDelegate-Protocol.h"
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 #import "SubredditContextProvider-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
@@ -18,7 +17,7 @@
 @class CommentListViewController, FloatingHeaderManager, ListingViewController, NSArray, NSLayoutConstraint, NSString, NotificationActionSheetPresenter, ParallaxHeaderView, RoadblockCoordinator, Subreddit, UserAboutViewController, UserProfilePresenter;
 @protocol UserPostFeedViewControllerInterface;
 
-@interface UserProfileViewController : PagedTabViewController <ParallaxHeaderViewCallback, RUIActionSheetViewControllerDelegate, UIGestureRecognizerDelegate, PagedTabControllerParentCallback, UserProfileEditViewControllerDelegate, UserProfilePresenterDelegate, SubredditContextProvider, PreviewModeDelegate>
+@interface UserProfileViewController : PagedTabViewController <ParallaxHeaderViewCallback, RUIActionSheetViewControllerDelegate, UIGestureRecognizerDelegate, PagedTabControllerParentCallback, UserProfileEditViewControllerDelegate, UserProfilePresenterDelegate, SubredditContextProvider>
 {
     _Bool _previewModeEnabled;
     NSArray *_overflowItems;

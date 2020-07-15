@@ -10,6 +10,10 @@
 
 @interface _TtC6Reddit23StreamingEntryPointNode : ASCellNode
 {
+    // Error parsing type: , name: audioObserver
+    // Error parsing type: , name: videoService
+    // Error parsing type: , name: userUnmuted
+    // Error parsing type: , name: isEnteringStream
     // Error parsing type: , name: delegate
     // Error parsing type: , name: nodeDisplayMode
     // Error parsing type: , name: feedDisplaymode
@@ -20,6 +24,7 @@
     // Error parsing type: , name: presenter
     // Error parsing type: , name: watcherCountNode
     // Error parsing type: , name: titleNode
+    // Error parsing type: , name: muteButton
     // Error parsing type: , name: overflowNode
     // Error parsing type: , name: videoNode
     // Error parsing type: , name: expandBackground
@@ -34,6 +39,8 @@
     // Error parsing type: , name: staticNode
     // Error parsing type: , name: iconBackgroundSize
     // Error parsing type: , name: iconSize
+    // Error parsing type: , name: bottomYInset
+    // Error parsing type: , name: muteSize
     // Error parsing type: , name: liveSize
     // Error parsing type: , name: titleBarHeight
     // Error parsing type: , name: aspectRatio

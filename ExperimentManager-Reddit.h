@@ -16,6 +16,7 @@
 @property(readonly, nonatomic) _Bool shouldSetCommentDepthOnRequest;
 - (void)exposeShouldShowAllInboxNotificationsWhenUnauthorized;
 @property(readonly, nonatomic) _Bool shouldShowAllInboxNotificationsWhenUnauthorized;
+@property(readonly, nonatomic) _Bool isSentryReportsForAnalyticsEventsEnabled;
 - (void)exposeAnonymousBrowsingMode;
 @property(nonatomic) _Bool isInAnonymousBrowsing;
 - (id)anonymousBrowsingExperimentName;
@@ -27,6 +28,7 @@
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
 @property(readonly, nonatomic) _Bool isSubredditIdOnCommunityPostConsumeEnabled;
 @property(readonly, nonatomic) _Bool isRPANSubredditIdToSREnabled;
+@property(readonly, nonatomic) _Bool isRPANDUVolumeToggleEnabled;
 @property(readonly, nonatomic) _Bool isRPANNewAudioPolicyEnabled;
 - (void)exposeVideoNewVolumePolicy;
 @property(readonly, nonatomic) long long videoPlayerNewVolumePolicyVariant;

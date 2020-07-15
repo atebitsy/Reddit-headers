@@ -10,6 +10,8 @@
 
 @interface _TtC6Reddit29PollPostOptionsViewController : UIViewController
 {
+    // Error parsing type: , name: onNewOptionCreated
+    // Error parsing type: , name: type
     // Error parsing type: , name: optionsCount
     // Error parsing type: , name: minOptions
     // Error parsing type: , name: maxOptions
@@ -19,8 +21,8 @@
     // Error parsing type: , name: addOptionButton
     // Error parsing type: , name: durationButton
     // Error parsing type: , name: selectedDragIndex
-    // Error parsing type: , name: onNewOptionCreated
-    // Error parsing type: , name: duration
+    // Error parsing type: , name: durationInDays
+    // Error parsing type: , name: expirationDate
 }
 
 - (void).cxx_destruct;
@@ -31,7 +33,8 @@
 - (void)setKeyboardFocus;
 - (void)configureWithPost:(id)arg1;
 - (void)viewDidLoad;
-@property(nonatomic) long long duration; // @synthesize duration;
+@property(nonatomic, readonly) double duration;
+@property(nonatomic) long long type; // @synthesize type;
 @property(nonatomic, readonly) _Bool isValid;
 @property(nonatomic, readonly) NSArray *options;
 @property(nonatomic, copy) CDUnknownBlockType onNewOptionCreated;

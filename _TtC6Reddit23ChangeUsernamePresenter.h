@@ -10,6 +10,8 @@
 {
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: usernameCache
+    // Error parsing type: , name: isFetchingUsernames
     // Error parsing type: , name: pendingCheckUsername
 }
 

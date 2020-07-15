@@ -10,7 +10,7 @@
 
 @interface _TtC6Reddit29MainScreenTabManagerPresenter : NSObject
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: tabProvider
     // Error parsing type: , name: presentable
     // Error parsing type: , name: excludedCategories
@@ -21,7 +21,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)initWithService:(id)arg1 tabProvider:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 tabProvider:(id)arg2;
 @property(nonatomic) __weak id <_TtP6Reddit31MainScreenTabManagerPresentable_> presentable; // @synthesize presentable;
 
 @end

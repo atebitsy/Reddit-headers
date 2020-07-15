@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, NSArray, NSString, NSURLSession, NSUserDefaults, RedditService;
+@class Account, NSArray, NSString, NSURL, NSURLSession, NSUserDefaults, RedditService;
 
 @interface AccountManager : NSObject
 {
@@ -15,14 +15,16 @@
     NSURLSession *_session;
     NSUserDefaults *_defaults;
     NSString *_accountCachePath;
+    NSURL *_accountsDataDirectory;
 }
 
 + (void)saveAccount:(id)arg1 inDirectoryAtPath:(id)arg2;
 + (id)loadAccountsFromDiskAtPath:(id)arg1;
 + (id)defaultAccountsDirectoryPath;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *accountCachePath; // @synthesize accountCachePath=_accountCachePath;
-@property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
+@property(readonly, nonatomic) NSURL *accountsDataDirectory; // @synthesize accountsDataDirectory=_accountsDataDirectory;
+@property(readonly, copy, nonatomic) NSString *accountCachePath; // @synthesize accountCachePath=_accountCachePath;
+@property(readonly, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
 @property(readonly, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(copy, nonatomic) NSArray *services; // @synthesize services=_services;
 @property(retain, nonatomic) RedditService *currentService; // @synthesize currentService=_currentService;
@@ -61,8 +63,8 @@
 @property(readonly, nonatomic) RedditService *loggedOutService;
 @property(readonly, nonatomic) NSArray *loggedInAccounts;
 @property(readonly, nonatomic) NSArray *accounts;
-- (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2 services:(id)arg3 currentService:(id)arg4;
-- (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2;
+- (id)initWithAccountCachePath:(id)arg1 accountsDataDirectory:(id)arg2 userDefaults:(id)arg3 services:(id)arg4 currentService:(id)arg5;
+- (id)initWithAccountCachePath:(id)arg1 accountsDataDirectory:(id)arg2 userDefaults:(id)arg3;
 - (id)init;
 
 @end

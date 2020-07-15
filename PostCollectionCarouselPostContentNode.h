@@ -6,7 +6,7 @@
 
 #import "BaseFeedDisplayNode.h"
 
-@class ASDisplayNode, ASTextNode, FeedPostOptions, Post;
+@class ASDisplayNode, FeedPostOptions, Post, RichTextTextNode;
 @protocol FeedPostContentNodeDelegate, ViewContext;
 
 @interface PostCollectionCarouselPostContentNode : BaseFeedDisplayNode
@@ -14,7 +14,7 @@
     Post *_post;
     ASDisplayNode *_contentNode;
     ASDisplayNode *_gradientNode;
-    ASTextNode *_desciptionNode;
+    RichTextTextNode *_desciptionNode;
     FeedPostOptions *_options;
     id <FeedPostContentNodeDelegate> _delegate;
     id <ViewContext> _viewContext;
@@ -24,7 +24,7 @@
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
-@property(retain, nonatomic) ASTextNode *desciptionNode; // @synthesize desciptionNode=_desciptionNode;
+@property(retain, nonatomic) RichTextTextNode *desciptionNode; // @synthesize desciptionNode=_desciptionNode;
 @property(retain, nonatomic) ASDisplayNode *gradientNode; // @synthesize gradientNode=_gradientNode;
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;

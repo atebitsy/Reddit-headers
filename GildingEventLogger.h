@@ -32,6 +32,7 @@
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
 - (id)gildingContentString;
+- (id)offerPercentage:(id)arg1;
 - (id)goldPurchaseForAward:(id)arg1 product:(id)arg2;
 - (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
 - (void)logViewPurchaseSuccessEventWithAward:(id)arg1 product:(id)arg2 transactionId:(id)arg3;

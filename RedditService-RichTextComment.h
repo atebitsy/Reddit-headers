@@ -36,6 +36,7 @@
 @property(readonly, nonatomic) ChatMessageStore *chatMessageStore;
 - (void)createChatStores;
 @property(readonly, nonatomic) DatabaseManager *dbManager;
+- (id)sampledErrorReporter;
 @property(readonly, nonatomic) AnalyticsManager *analyticsManager;
 @property(readonly, nonatomic) AdEventsManager *adEventsManager;
 @property(readonly, nonatomic) FocusVerticalManager *focusVerticalManager;

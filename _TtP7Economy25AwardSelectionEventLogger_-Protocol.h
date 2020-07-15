@@ -9,6 +9,7 @@
 @class Award, NSString;
 
 @protocol _TtP7Economy25AwardSelectionEventLogger_ <NSObject>
+- (void)logClickGetPremiumButtonEventWithAward:(Award *)arg1;
 - (void)logClickGetMoreCoinsEvent;
 - (void)logClickEditOptionsEvent;
 - (void)logCloseGiveAwardModalEvent;

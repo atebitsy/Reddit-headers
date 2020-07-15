@@ -59,7 +59,7 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AwardCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)showGoldUpsell;
-- (void)checkForGoldUpsell;
+- (void)didFinishGivingAward;
 - (void)purchaseLowCoinOffer;
 - (void)presentErrorWithOptions:(id)arg1 state:(id)arg2 redditDomainError:(id)arg3;
 - (void)dismissForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
@@ -82,7 +82,9 @@
 - (void)sendAward;
 - (void)sendAwardWithOptions:(id)arg1 award:(id)arg2 isAnonymous:(_Bool)arg3 message:(id)arg4 hostViewController:(id)arg5;
 - (void)restorePreviousLastGivenAwardIdentifier;
-- (void)handleGildingCompletionWithKarmaScore:(id)arg1 AndError:(id)arg2;
+- (void)handleGildingCompletionWithKarmaScore:(id)arg1 andError:(id)arg2;
+- (void)handleGildingSuccessWithKarmaScore:(id)arg1;
+- (void)handleGildingFailureWithError:(id)arg1;
 - (void)optimisticallyUpdateGivenAwardsCache;
 - (void)submitAward;
 - (void)startCoinPurchaseFlow;

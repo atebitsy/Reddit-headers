@@ -23,7 +23,6 @@
     // Error parsing type: , name: toolbarHeight
     // Error parsing type: , name: edgePadding
     // Error parsing type: , name: $__lazy_storage_$_textContainerInset
-    // Error parsing type: , name: accountContext
     // Error parsing type: , name: presenter
     // Error parsing type: , name: post
     // Error parsing type: , name: commentTreeNode
@@ -54,7 +53,7 @@
 - (void)viewDidLoad;
 @property(nonatomic, readonly) double composerHeight;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountContext:(id)arg1 presenter:(id)arg2;
+- (id)initWithPresenter:(id)arg1;
 @property(nonatomic, retain) BaseAttachmentTextView *commentTextView;
 @property(nonatomic) __weak id <_TtP6Reddit27CommentComposerViewDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic, retain) NSLayoutYAxisAnchor *bottomViewYAnchor; // @synthesize bottomViewYAnchor;

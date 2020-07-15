@@ -11,6 +11,7 @@
     // Error parsing type: , name: product
     // Error parsing type: , name: subreddit
     // Error parsing type: , name: account
+    // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: actionChannel
     // Error parsing type: , name: correlationID
     // Error parsing type: , name: purchaseCorrelationID

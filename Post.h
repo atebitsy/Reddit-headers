@@ -75,6 +75,7 @@
     NSArray *_categories;
     PostEventInfo *_eventInfo;
     NSArray *_postCollectionIds;
+    NSArray *_gallery;
     NSArray *_awardingTotals;
     unsigned long long _totalAwardsReceived;
     long long _discussionType;
@@ -99,6 +100,7 @@
 @property(nonatomic) unsigned long long totalAwardsReceived; // @synthesize totalAwardsReceived=_totalAwardsReceived;
 @property(copy, nonatomic) NSArray *awardingTotals; // @synthesize awardingTotals=_awardingTotals;
 @property(nonatomic) _Bool canAward; // @synthesize canAward=_canAward;
+@property(retain, nonatomic) NSArray *gallery; // @synthesize gallery=_gallery;
 @property(retain, nonatomic) NSArray *postCollectionIds; // @synthesize postCollectionIds=_postCollectionIds;
 @property(retain, nonatomic) PostEventInfo *eventInfo; // @synthesize eventInfo=_eventInfo;
 @property(nonatomic) _Bool isFollowed; // @synthesize isFollowed=_isFollowed;

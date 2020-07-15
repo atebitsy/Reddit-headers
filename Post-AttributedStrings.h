@@ -12,9 +12,6 @@
 @class NSAttributedString, NSString, NSURL;
 
 @interface Post (AttributedStrings) <IGListDiffable, _TtP11RedditVideo17VideoIdentifiable_>
-+ (unsigned long long)postDisplayTypeForPost:(id)arg1;
-+ (_Bool)shouldOverridePostType:(unsigned long long *)arg1 forPost:(id)arg2;
-+ (_Bool)doesString:(id)arg1 matchPattern:(id)arg2;
 + (id)keyPathsRequireReorderFeed;
 + (id)keyPathsRequireUpdateFeed;
 - (void)generateFeedPostTextStrings;
@@ -30,7 +27,6 @@
 @property(readonly, nonatomic) NSURL *downloadableMP4URL;
 @property(readonly, nonatomic) _Bool isRedditVideoStream;
 @property(readonly, nonatomic) Post *originalPost;
-@property(readonly, nonatomic) unsigned long long postDisplayType;
 @property(readonly, nonatomic) NSString *shortDomain;
 - (id)postTimeString;
 - (id)authorString;
@@ -62,7 +58,6 @@
 - (id)thumbnailURLForFeed;
 - (struct CGSize)mediaSizeForTargetWidth:(double)arg1;
 @property(readonly, nonatomic) NSURL *unavailableVideoURL;
-@property(readonly, nonatomic) _Bool isRPANPostOrCrosspost;
 @property(readonly, nonatomic) _Bool isVideoEmbed;
 @property(readonly, nonatomic) _Bool hasThumbnailOrMedia;
 - (_Bool)hasNsfwContent;

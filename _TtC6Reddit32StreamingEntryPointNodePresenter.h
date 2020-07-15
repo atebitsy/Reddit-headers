@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit32StreamingEntryPointNodePresenter : NSObject
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: streamManager
     // Error parsing type: , name: current
     // Error parsing type: , name: delegate
@@ -28,7 +29,7 @@
 - (id)init;
 - (void)didUpdateStreamingConfig;
 - (void)dealloc;
-- (id)initWithStreamManager:(id)arg1 delegate:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 streamManager:(id)arg2 delegate:(id)arg3;
 
 @end
 

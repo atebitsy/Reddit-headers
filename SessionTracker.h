@@ -28,6 +28,7 @@
 @property(readonly, nonatomic) NSString *sessionId;
 @property(copy, nonatomic) NSString *fullString;
 @property(readonly, nonatomic) NSString *userDefaultsKey;
+- (void)reset;
 - (id)initWithAccountPk:(id)arg1 userDefaults:(id)arg2;
 
 // Remaining properties

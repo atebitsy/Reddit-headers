@@ -19,6 +19,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)econConfigsWithRedditService:(id)arg1;
 - (_Bool)isInAnonymousBrowsingWithRedditService:(id)arg1;
 - (id)economyAnalyticsLoggerWithRedditService:(id)arg1;
 - (id)initWithAccountManager:(id)arg1 appSettings:(id)arg2;

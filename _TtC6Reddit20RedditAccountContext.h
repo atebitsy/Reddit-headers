@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class Account, AccountManager, AdEventsManager, AnalyticsManager, AppSettings, ConfigManager, ExperimentManager, GivenAwardsManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit12VideoService, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit24RedditMuxAnalyticsLogger;
-@protocol ViewContext;
+@protocol ViewContext, _TtP6Reddit13ErrorReporter_;
 
 @interface _TtC6Reddit20RedditAccountContext : NSObject
 {
@@ -20,6 +20,7 @@
     // Error parsing type: , name: anonymousModeManager
     // Error parsing type: , name: redditMuxAnalyticsLogger
     // Error parsing type: , name: appSettings
+    // Error parsing type: , name: errorReporter
 }
 
 - (void).cxx_destruct;
@@ -33,6 +34,7 @@
 @property(nonatomic, readonly) Account *account;
 @property(nonatomic, readonly) id <ViewContext> viewContext;
 - (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 visibilityTracker:(id)arg4 identityProviderService:(id)arg5 videoService:(id)arg6 anonymousModeManager:(id)arg7 redditMuxAnalyticsLogger:(id)arg8 appSettings:(id)arg9;
+@property(nonatomic, readonly) id <_TtP6Reddit13ErrorReporter_> errorReporter; // @synthesize errorReporter;
 @property(nonatomic, readonly) AppSettings *appSettings; // @synthesize appSettings;
 @property(nonatomic, readonly) _TtC6Reddit24RedditMuxAnalyticsLogger *redditMuxAnalyticsLogger; // @synthesize redditMuxAnalyticsLogger;
 @property(nonatomic, readonly) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager;

@@ -27,7 +27,6 @@
 @property(retain, nonatomic) VisibilityOptions *visibilityOptions; // @synthesize visibilityOptions=_visibilityOptions;
 @property(nonatomic) __weak UIView *associatedView; // @synthesize associatedView=_associatedView;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (struct Visibility)computeVisibilityStruct;
 - (void)computeVisibility;
 - (void)_handleVisibility;
 - (void)handleVisibility;

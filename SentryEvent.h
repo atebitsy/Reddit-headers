@@ -8,13 +8,14 @@
 
 #import <Sentry/SentrySerializable-Protocol.h>
 
-@class NSArray, NSDate, NSDictionary, NSString, SentryContext, SentryStacktrace, SentryUser;
+@class NSArray, NSData, NSDate, NSDictionary, NSString, SentryContext, SentryStacktrace, SentryUser;
 
 @interface SentryEvent : NSObject <SentrySerializable>
 {
     NSString *_eventId;
     NSString *_message;
     NSDate *_timestamp;
+    NSDate *_startTimestamp;
     long long _level;
     NSString *_platform;
     NSString *_logger;
@@ -23,6 +24,7 @@
     NSString *_dist;
     NSString *_environment;
     NSString *_transaction;
+    NSString *_type;
     NSDictionary *_tags;
     NSDictionary *_extra;
     NSDictionary *_sdk;
@@ -36,9 +38,11 @@
     NSArray *_debugMeta;
     NSDictionary *_breadcrumbsSerialized;
     NSDictionary *_infoDict;
+    NSData *_json;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSData *json; // @synthesize json=_json;
 @property(retain, nonatomic) NSDictionary *infoDict; // @synthesize infoDict=_infoDict;
 @property(retain, nonatomic) NSDictionary *breadcrumbsSerialized; // @synthesize breadcrumbsSerialized=_breadcrumbsSerialized;
 @property(retain, nonatomic) NSArray *debugMeta; // @synthesize debugMeta=_debugMeta;
@@ -52,6 +56,7 @@
 @property(retain, nonatomic) NSDictionary *sdk; // @synthesize sdk=_sdk;
 @property(retain, nonatomic) NSDictionary *extra; // @synthesize extra=_extra;
 @property(retain, nonatomic) NSDictionary *tags; // @synthesize tags=_tags;
+@property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(copy, nonatomic) NSString *transaction; // @synthesize transaction=_transaction;
 @property(copy, nonatomic) NSString *environment; // @synthesize environment=_environment;
 @property(copy, nonatomic) NSString *dist; // @synthesize dist=_dist;
@@ -60,6 +65,7 @@
 @property(copy, nonatomic) NSString *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *platform; // @synthesize platform=_platform;
 @property(nonatomic) long long level; // @synthesize level=_level;
+@property(retain, nonatomic) NSDate *startTimestamp; // @synthesize startTimestamp=_startTimestamp;
 @property(retain, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(copy, nonatomic) NSString *eventId; // @synthesize eventId=_eventId;
@@ -70,6 +76,7 @@
 - (void)addDebugImages:(id)arg1;
 - (void)addOptionalListProperties:(id)arg1;
 - (id)serialize;
+- (id)initWithJSON:(id)arg1;
 - (id)initWithLevel:(long long)arg1;
 
 // Remaining properties

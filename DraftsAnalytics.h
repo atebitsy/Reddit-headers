@@ -10,12 +10,12 @@
 {
 }
 
-+ (void)logEventForPost:(id)arg1 noun:(id)arg2;
-+ (void)logEventForDraft:(id)arg1 noun:(id)arg2;
-+ (void)draftDeleted:(id)arg1;
-+ (void)draftLoaded:(id)arg1;
-+ (void)draftUpdatedWithPost:(id)arg1;
-+ (void)draftCreatedWithPost:(id)arg1;
++ (void)logEventForPost:(id)arg1 noun:(id)arg2 analyticsManager:(id)arg3;
++ (void)logEventForDraft:(id)arg1 noun:(id)arg2 analyticsManager:(id)arg3;
++ (void)draftDeleted:(id)arg1 analyticsManager:(id)arg2;
++ (void)draftLoaded:(id)arg1 analyticsManager:(id)arg2;
++ (void)draftUpdatedWithPost:(id)arg1 analyticsManager:(id)arg2;
++ (void)draftCreatedWithPost:(id)arg1 analyticsManager:(id)arg2;
 
 @end
 

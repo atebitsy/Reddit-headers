@@ -48,7 +48,7 @@
 @property(nonatomic) long long offsetIndex; // @synthesize offsetIndex=_offsetIndex;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(nonatomic) _Bool showingAge; // @synthesize showingAge=_showingAge;
-@property(retain, nonatomic) id <ProfileDrawerStatsDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <ProfileDrawerStatsDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) BaseView *rightCurtain; // @synthesize rightCurtain=_rightCurtain;
 @property(retain, nonatomic) BaseView *leftCurtain; // @synthesize leftCurtain=_leftCurtain;
 @property(retain, nonatomic) BaseLabel *redditorSinceLabel; // @synthesize redditorSinceLabel=_redditorSinceLabel;

@@ -8,12 +8,13 @@
 
 #import "LinkViewControllerDelegate-Protocol.h"
 
-@class APIError, BaseTextView, NSString, UIView, _TtC6Reddit29PollPostOptionsViewController;
+@class APIError, BaseTextView, NSString, UIView, _TtC6Reddit29PollPostOptionsViewController, _TtC7Economy19PollTypesPickerView;
 
 @interface PollPostViewController : PostViewController <LinkViewControllerDelegate>
 {
     BaseTextView *_postView;
     UIView *_separatorView;
+    _TtC7Economy19PollTypesPickerView *_pollTypesPickerView;
     _TtC6Reddit29PollPostOptionsViewController *_postPollOptionsViewController;
     APIError *_formatValidationError;
     NSString *_postViewPlaceholder;
@@ -25,6 +26,7 @@
 @property(readonly, nonatomic) NSString *postViewPlaceholder; // @synthesize postViewPlaceholder=_postViewPlaceholder;
 @property(retain, nonatomic) APIError *formatValidationError; // @synthesize formatValidationError=_formatValidationError;
 @property(retain, nonatomic) _TtC6Reddit29PollPostOptionsViewController *postPollOptionsViewController; // @synthesize postPollOptionsViewController=_postPollOptionsViewController;
+@property(retain, nonatomic) _TtC7Economy19PollTypesPickerView *pollTypesPickerView; // @synthesize pollTypesPickerView=_pollTypesPickerView;
 @property(retain, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
 @property(retain, nonatomic) BaseTextView *postView; // @synthesize postView=_postView;
 - (id)analyticsPostComposerType;
@@ -43,10 +45,13 @@
 - (void)layoutTextFieldsInScroller;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidLoad;
+- (id)typeTitleString;
+- (void)makeContentVisible;
 - (void)configureWithPostToEdit:(id)arg1;
 - (id)powerupsMarketingBadgeView;
 - (id)postErrorSeparator;
 - (id)titleErrorSeparator;
+- (_Bool)predictionsEnabled;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

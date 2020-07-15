@@ -32,6 +32,7 @@
 - (void)editOptionsViewController:(id)arg1 didSaveOptions:(id)arg2;
 - (void)didDismiss;
 - (void)sendAwardWithOptions:(id)arg1 award:(id)arg2 isAnonymous:(_Bool)arg3 message:(id)arg4 hostViewController:(id)arg5;
+- (id)getPremiumViewController;
 - (id)getMoreCoinsViewController;
 - (void)setIsAnonymousByDefaultWithIsAnonymousByDefault:(_Bool)arg1;
 - (_Bool)isAnonymousByDefault;

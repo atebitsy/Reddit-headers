@@ -23,12 +23,12 @@
 @interface CarouselContainerNode : BaseFeedDisplayNode <LocationActionDelegate, PreviewLocationActionDelegate, PrivacyViewDelegate, DiscoveryHeaderNodeDelegate, DetailedSubscribeNodeDelegate, RUIActionSheetViewControllerDelegate, PillWidgetNodeDelegate, DiscoveryFandomBannerNodeDelegate, SpellingSuggestionNodeDelegate, StackedSearchesNodeDelegate>
 {
     _Bool _showGradientBackground;
+    id <ViewContext> _viewContext;
     DiscoveryHeaderNode *_headerNode;
     Carousel *_carousel;
     LocationManager *_locationManager;
     id <CarouselContainerNodeDelegate> _delegate;
     CarouselNodeController *_carouselNodeController;
-    id <ViewContext> _viewContext;
     DetailedSubscribeNode *_detailedSubcribeNode;
     LocationActionNode *_locationActionNode;
     PreviewLocationActionNode *_previewLocationActionNode;
@@ -50,13 +50,13 @@
 @property(retain, nonatomic) PreviewLocationActionNode *previewLocationActionNode; // @synthesize previewLocationActionNode=_previewLocationActionNode;
 @property(retain, nonatomic) LocationActionNode *locationActionNode; // @synthesize locationActionNode=_locationActionNode;
 @property(retain, nonatomic) DetailedSubscribeNode *detailedSubcribeNode; // @synthesize detailedSubcribeNode=_detailedSubcribeNode;
-@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) CarouselNodeController *carouselNodeController; // @synthesize carouselNodeController=_carouselNodeController;
 @property(nonatomic) __weak id <CarouselContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) LocationManager *locationManager; // @synthesize locationManager=_locationManager;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(retain, nonatomic) DiscoveryHeaderNode *headerNode; // @synthesize headerNode=_headerNode;
 @property(nonatomic) _Bool showGradientBackground; // @synthesize showGradientBackground=_showGradientBackground;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)stackedSearchesNode:(id)arg1 didTapCarouselItem:(id)arg2 atIndex:(long long)arg3;
 - (void)spellingSuggestionNode:(id)arg1 didTapCarouselItem:(id)arg2;
 - (void)discoveryFandomBannerNode:(id)arg1 didTapOverflowButton:(id)arg2 carouselItem:(id)arg3;

@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit23StreamingEntryPointNode (Reddit)
 - (void)didTapOverflowNode:(id)arg1;
+- (void)didTapMuteButton;
 - (id)entryNodePlayer;
 - (void)didUpdateCurrentStream:(id)arg1;
 - (void)didUpdateWatcherCount:(long long)arg1;

@@ -30,7 +30,7 @@
 @property(retain, nonatomic) NSDictionary *report; // @synthesize report=_report;
 @property(retain, nonatomic) NSDictionary *userContext; // @synthesize userContext=_userContext;
 - (id)convertThreads;
-- (id)extractMechanism;
+- (id)extractMechanismOfType:(id)arg1;
 - (void)enhanceValueFromNotableAddresses:(id)arg1;
 - (id)parseNSException;
 - (id)convertExceptions;

@@ -24,6 +24,7 @@
     UIImage *_checkboxChecked;
     UIImageView *_publicToggle;
     UIImageView *_anonymousToggle;
+    BaseLabel *_showUsernameSublabel;
     id <SelectAwardEditOptionsViewControllerDelegate> _delegate;
     SelectAwardEditOptions *_options;
 }
@@ -41,6 +42,7 @@
 @property(readonly, nonatomic) CharacterLimitTextView *enterMessageTextView; // @synthesize enterMessageTextView=_enterMessageTextView;
 @property(readonly, nonatomic) BaseLabel *enterMessageLabel; // @synthesize enterMessageLabel=_enterMessageLabel;
 @property(readonly, nonatomic) BaseLabel *anonymousLabel; // @synthesize anonymousLabel=_anonymousLabel;
+@property(readonly, nonatomic) BaseLabel *showUsernameSublabel; // @synthesize showUsernameSublabel=_showUsernameSublabel;
 @property(readonly, nonatomic) BaseLabel *showUsernameLabel; // @synthesize showUsernameLabel=_showUsernameLabel;
 - (id)toggle:(_Bool)arg1;
 - (id)iconNamed:(id)arg1;

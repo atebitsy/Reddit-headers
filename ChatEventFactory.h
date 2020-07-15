@@ -22,6 +22,8 @@
 + (id)userProfileEventWithAction:(id)arg1 noun:(id)arg2 userId:(id)arg3 pageType:(id)arg4;
 + (id)settingsEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 kickDuration:(id)arg4;
 + (id)settingsEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 reportedContact:(id)arg4 blockedContact:(id)arg5;
++ (id)chatViewEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 reportedContact:(id)arg4 blockedContact:(id)arg5;
++ (id)reportEventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 channel:(id)arg4 reportedContact:(id)arg5 blockedContact:(id)arg6;
 + (id)chatPreviewEventsWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3;
 + (id)chatTypeStringWithChannel:(id)arg1;
 + (id)invitationInboxEventsWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 message:(id)arg4;

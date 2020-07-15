@@ -28,6 +28,7 @@
 @property(nonatomic) unsigned long long maxEvents; // @synthesize maxEvents=_maxEvents;
 - (void)handleFileManagerLimit:(id)arg1 maxCount:(unsigned long long)arg2;
 - (id)storeDictionary:(id)arg1 toPath:(id)arg2;
+- (id)storeData:(id)arg1 toPath:(id)arg2;
 - (id)storeBreadcrumb:(id)arg1 maxCount:(unsigned long long)arg2;
 - (id)storeBreadcrumb:(id)arg1;
 - (id)storeEvent:(id)arg1 maxCount:(unsigned long long)arg2;

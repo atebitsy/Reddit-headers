@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseButtonNode, ChatPostFeedIndicatorNode, FeedPostOptions, NSString, Post, UIView, VoteButtonNode;
-@protocol FeedPostCommentBarNodeDelegate;
+@protocol FeedPostCommentBarNodeDelegate, ViewContext;
 
 @interface FeedPostCommentBarNode : BaseFeedDisplayNode <ObjectObserverProtocol>
 {
@@ -18,6 +18,7 @@
     id <FeedPostCommentBarNodeDelegate> _delegate;
     BaseButtonNode *_actionButtonNode;
     BaseButtonNode *_awardButtonNode;
+    id <ViewContext> _viewContext;
     BaseButtonNode *_scoreButtonNode;
     VoteButtonNode *_upvoteButtonNode;
     VoteButtonNode *_downvoteButtonNode;
@@ -34,13 +35,13 @@
 @property(retain, nonatomic) VoteButtonNode *downvoteButtonNode; // @synthesize downvoteButtonNode=_downvoteButtonNode;
 @property(retain, nonatomic) VoteButtonNode *upvoteButtonNode; // @synthesize upvoteButtonNode=_upvoteButtonNode;
 @property(retain, nonatomic) BaseButtonNode *scoreButtonNode; // @synthesize scoreButtonNode=_scoreButtonNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) BaseButtonNode *awardButtonNode; // @synthesize awardButtonNode=_awardButtonNode;
 @property(retain, nonatomic) BaseButtonNode *actionButtonNode; // @synthesize actionButtonNode=_actionButtonNode;
 @property(nonatomic) __weak id <FeedPostCommentBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 - (void)updateActionButtonOnImageToggle;
 - (void)updateContentViewsForData:(id)arg1;
-- (void)awardButtonDidTap:(id)arg1;
 - (void)actionButtonDidTap:(id)arg1;
 - (void)commentButtonDidTap:(id)arg1;
 - (void)downvoteButtonDidTap:(id)arg1;
@@ -57,7 +58,7 @@
 - (void)configureVoteButtons;
 - (void)didLoad;
 - (void)configureWithPost:(id)arg1;
-- (id)initWithPost:(id)arg1 options:(id)arg2;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

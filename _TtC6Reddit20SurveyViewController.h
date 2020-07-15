@@ -11,11 +11,13 @@
     // Error parsing type: , name: surveyModel
     // Error parsing type: , name: service
     // Error parsing type: , name: analyticsManager
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: questionViewModels
     // Error parsing type: , name: totalQuestions
     // Error parsing type: , name: currentQuestion
     // Error parsing type: , name: containerIntroTopContraint
     // Error parsing type: , name: containerQuestionTopContraint
+    // Error parsing type: , name: isDismissable
     // Error parsing type: , name: closeButton
     // Error parsing type: , name: altPrimaryButton
     // Error parsing type: , name: titleLabel
@@ -30,7 +32,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)init:(id)arg1 service:(id)arg2 analyticsManager:(id)arg3;
+- (id)init:(id)arg1 accountContext:(id)arg2;
 
 @end
 

@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class Account, AccountIdentifiers, AnalyticsAPIClient, AppSettings, Loid, NSDate, NSNotificationCenter, NSString, PersistedSet, SessionTracker;
-@protocol AnalyticsProcessorDelegate;
+@protocol AnalyticsProcessorDelegate, _TtP6Reddit13ErrorReporter_;
 
 @interface AnalyticsEventProcessor : NSObject
 {
@@ -21,6 +21,7 @@
     SessionTracker *_sessionTracker;
     AppSettings *_appSettings;
     NSNotificationCenter *_notificationCenter;
+    id <_TtP6Reddit13ErrorReporter_> _errorReporter;
     PersistedSet *_eventsSet;
     PersistedSet *_pendingEventsSet;
     long long _eventBatchSize;
@@ -41,6 +42,7 @@
 @property long long eventBatchSize; // @synthesize eventBatchSize=_eventBatchSize;
 @property(readonly, nonatomic) PersistedSet *pendingEventsSet; // @synthesize pendingEventsSet=_pendingEventsSet;
 @property(readonly, nonatomic) PersistedSet *eventsSet; // @synthesize eventsSet=_eventsSet;
+@property(readonly, nonatomic) id <_TtP6Reddit13ErrorReporter_> errorReporter; // @synthesize errorReporter=_errorReporter;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) AppSettings *appSettings; // @synthesize appSettings=_appSettings;
 @property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
@@ -66,7 +68,7 @@
 - (void)flushPendingEvents;
 - (void)processEvents;
 - (void)startHeartbeat;
-- (id)initWithCachePath:(id)arg1 redditService:(id)arg2 appSettings:(id)arg3 apiClient:(id)arg4 notificationCenter:(id)arg5;
+- (id)initWithCachePath:(id)arg1 redditService:(id)arg2 appSettings:(id)arg3 apiClient:(id)arg4 notificationCenter:(id)arg5 errorReporter:(id)arg6;
 
 @end
 

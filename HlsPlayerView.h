@@ -31,6 +31,7 @@
     _Bool _initializationFailedDueToOffline;
     _Bool _resumeAfterBuffer;
     _Bool _initializationFailedDueTo404;
+    id <ViewContext> _viewContext;
     id <PlayerViewDelegate> _delegate;
     id <TheatrePlayerDelegate> _theatrePlayerDelegate;
     Post *_post;
@@ -46,7 +47,6 @@
     long long _timeToFirstFrame;
     NSDate *_loadStartTime;
     long long _retryAttempt;
-    id <ViewContext> _viewContext;
     GradientView *_gradientView;
     BaseImageView *_collapseImageView;
     BaseImageView *_expandImageView;
@@ -108,7 +108,6 @@
 @property(retain, nonatomic) BaseImageView *expandImageView; // @synthesize expandImageView=_expandImageView;
 @property(retain, nonatomic) BaseImageView *collapseImageView; // @synthesize collapseImageView=_collapseImageView;
 @property(retain, nonatomic) GradientView *gradientView; // @synthesize gradientView=_gradientView;
-@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) long long retryAttempt; // @synthesize retryAttempt=_retryAttempt;
 @property(retain, nonatomic) NSDate *loadStartTime; // @synthesize loadStartTime=_loadStartTime;
 @property(nonatomic) long long timeToFirstFrame; // @synthesize timeToFirstFrame=_timeToFirstFrame;
@@ -133,6 +132,7 @@
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <TheatrePlayerDelegate> theatrePlayerDelegate; // @synthesize theatrePlayerDelegate=_theatrePlayerDelegate;
 @property(nonatomic) __weak id <PlayerViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)playbackPageType;
 - (id)playbackStreamPost;
 - (id)playbackAVPlayer;

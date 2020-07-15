@@ -107,7 +107,7 @@
 - (void)dealloc;
 @property(readonly, nonatomic) NSHTTPCookie *modMailCookie;
 - (id)initWithAccount:(id)arg1 dataDirectory:(id)arg2 credentials:(id)arg3 accountIdendifiers:(id)arg4 requestProcessors:(id)arg5 responseProcessors:(id)arg6 sessionTracker:(id)arg7 loid:(id)arg8;
-- (id)initWithAccount:(id)arg1;
+- (id)initWithAccount:(id)arg1 dataDirectory:(id)arg2;
 - (void)deleteDraftPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveDraftPostForSubmittedPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchDraftPostCountWithCompletion:(CDUnknownBlockType)arg1;

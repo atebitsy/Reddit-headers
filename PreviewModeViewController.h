@@ -18,11 +18,13 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
 @class BaseCollectionView, NSMutableSet, NSString, PagingCollectionViewLayout, PreviewModeDataSource;
+@protocol AccountContext;
 
 @interface PreviewModeViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, UIScrollViewDelegate, UICollectionViewDelegateExtended, PreviewModeDataSourceDelegate, PagingCollectionViewLayoutDelegate>
 {
     NSString *_pk;
     CDUnknownBlockType _didScrollToViewController;
+    id <AccountContext> _accountContext;
     PreviewModeDataSource *_previewModeDataSource;
     unsigned long long _initialIndex;
     BaseCollectionView *_collectionView;
@@ -38,6 +40,7 @@
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) unsigned long long initialIndex; // @synthesize initialIndex=_initialIndex;
 @property(retain, nonatomic) PreviewModeDataSource *previewModeDataSource; // @synthesize previewModeDataSource=_previewModeDataSource;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType didScrollToViewController; // @synthesize didScrollToViewController=_didScrollToViewController;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 - (void)logSwipePreviousEvent;
@@ -70,10 +73,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithPreviewModeDataSource:(id)arg1 initialIndex:(unsigned long long)arg2;
-- (id)initWithPreviewModeDataSource:(id)arg1;
-- (id)initWithPreviewControllers:(id)arg1 initialIndex:(unsigned long long)arg2;
-- (id)initWithPreviewControllers:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 previewModeDataSource:(id)arg2;
 - (id)collectionViewLayout;
 
 // Remaining properties

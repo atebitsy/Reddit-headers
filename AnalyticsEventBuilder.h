@@ -57,6 +57,7 @@
 + (id)postWithPost:(id)arg1;
 + (id)actionInfoWithPageType:(id)arg1 position:(id)arg2;
 + (void)buildUpEvent:(id)arg1 withData:(id)arg2;
++ (id)purchaseWithGoldProduct:(id)arg1;
 + (id)paymentWithGoldProduct:(id)arg1;
 + (id)goldPurchaseWithGoldProduct:(id)arg1;
 + (id)userForGoldEventWithAccount:(id)arg1;

@@ -7,10 +7,11 @@
 #import <objc/NSObject.h>
 
 #import "NSCoding-Protocol.h"
+#import "_TtP7Economy11EconConfigs_-Protocol.h"
 
 @class DiscoveryConfiguration, NSArray, NSDictionary, NSSet, NSString, NSURL, RedditService;
 
-@interface ConfigManager : NSObject <NSCoding>
+@interface ConfigManager : NSObject <_TtP7Economy11EconConfigs_, NSCoding>
 {
     _Bool _hasPerformedInitialFetch;
     _Bool _enableSearchResultsViewEventLogging;
@@ -87,6 +88,8 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithService:(id)arg1;
+@property(nonatomic, readonly) NSURL *URLForPrivacyPolicy;
+@property(nonatomic, readonly) NSURL *URLForUserAgreement;
 
 @end
 

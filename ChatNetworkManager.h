@@ -10,7 +10,7 @@
 #import "SBDConnectionDelegate-Protocol.h"
 
 @class AFURLSessionManager, NSHashTable, NSMutableArray, NSMutableDictionary, NSString, RedditService;
-@protocol OS_dispatch_semaphore;
+@protocol OS_dispatch_semaphore, _TtP6Reddit13ErrorReporter_;
 
 @interface ChatNetworkManager : NSObject <SBDConnectionDelegate, SBDChannelDelegate>
 {
@@ -24,11 +24,13 @@
     long long _refreshAccessTokenRetryCount;
     NSObject<OS_dispatch_semaphore> *_embedSemaphore;
     RedditService *_service;
+    id <_TtP6Reddit13ErrorReporter_> _errorReporter;
 }
 
 + (_Bool)isValidUserName:(id)arg1;
 + (id)getMentionedUsernamesFromString:(id)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <_TtP6Reddit13ErrorReporter_> errorReporter; // @synthesize errorReporter=_errorReporter;
 @property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *embedSemaphore; // @synthesize embedSemaphore=_embedSemaphore;
 @property(nonatomic) long long refreshAccessTokenRetryCount; // @synthesize refreshAccessTokenRetryCount=_refreshAccessTokenRetryCount;
@@ -153,7 +155,7 @@
 - (void)startRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureResponseHandler:(CDUnknownBlockType)arg3;
 - (void)startRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
 - (void)dealloc;
-- (id)initWithService:(id)arg1;
+- (id)initWithService:(id)arg1 errorReporter:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

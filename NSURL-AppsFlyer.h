@@ -23,9 +23,6 @@
 @property(readonly, nonatomic) NSString *postIDURLComponentFromCommentDeeplink;
 @property(readonly, nonatomic) NSString *postIDURLComponentFromPostDeeplink;
 @property(readonly, nonatomic) NSString *userNameURLComponent;
-@property(readonly, nonatomic) _Bool red_isShareableChatURL;
-@property(readonly, nonatomic) _Bool red_isDirectChatURL;
-@property(readonly, nonatomic) _Bool red_isSubredditChatURL;
 @property(readonly, nonatomic) _Bool red_isChatURL;
 - (id)sendbirdChannelPrefixString:(id)arg1;
 @property(readonly, nonatomic) NSString *channelURLComponent;
